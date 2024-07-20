@@ -1,0 +1,1 @@
+SELECT jia_id,COUNT(jia_id) AS num FROM jiayuan_pic_20150615  GROUP BY jia_id  HAVING num>3

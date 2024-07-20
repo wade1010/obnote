@@ -1,0 +1,1 @@
+[https://docs.ceph.com/en/latest/rados/operations/add-or-rm-osds/#adding-an-osd-manual](https://docs.ceph.com/en/latest/rados/operations/add-or-rm-osds/#adding-an-osd-manual)

@@ -1,0 +1,1 @@
+在php.ini文件中将改成on,short_open_tag = on

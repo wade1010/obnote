@@ -1,0 +1,1 @@
+decoder-only LM也叫Casual LM或left-to-right LM(GPT家族)

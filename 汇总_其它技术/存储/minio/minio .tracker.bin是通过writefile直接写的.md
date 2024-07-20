@@ -1,0 +1,1 @@
+minio .tracker.bin是通过writefile直接写的,而不是通过putObject接口

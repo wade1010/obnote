@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "39ce5f0f33b3f60b",
+    "type": "split",
+    "children": [
+      {
+        "id": "44b4a82b3b542320",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2631fe28d8ed1feb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "汇总_其它技术/其他[总]/vagrant安装系统并root的SSH登录.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4b1d91c6ac498243",
+    "type": "split",
+    "children": [
+      {
+        "id": "140a659d45b85d8f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a747eb95b09f8c0a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8fc389f11641f766",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "dce8b1a3f160b3c6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a3ab507a15806c8c",
+    "type": "split",
+    "children": [
+      {
+        "id": "dfc1d36c38e9bb40",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "615779729e3b213a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "汇总_其它技术/其他[总]/vagrant安装系统并root的SSH登录.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6649f5b85c6d53be",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "汇总_其它技术/其他[总]/vagrant安装系统并root的SSH登录.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ecf945f4b83b1d33",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "24bd104a50a7a12c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "汇总_其它技术/其他[总]/vagrant安装系统并root的SSH登录.md"
+              }
+            }
+          },
+          {
+            "id": "74073261d928fd5c",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "a747eb95b09f8c0a",
+  "lastOpenFiles": [
+    "Python/python杂乱/python模拟登陆之验证码与cookies的同步处理思路-python-Php教程-壹聚教程网.md",
+    "汇总_其它技术/PHP/PHP范类/PHP程序自动运行，windows计划任务.md",
+    "汇总_其它技术/Redis/PHP 操作redis 详细讲解转的 - jackluo - 博客园.md",
+    "汇总_其它技术/存储/oeoshd高密盘.md",
+    "汇总_其它技术/PHP/工具类库/实用代码收集.md",
+    "汇总_其它技术/其他[总]/宝宝起名.md",
+    "硬件/虚拟化/qemu-kvm.md",
+    "硬件/查看系统信息的脚本.md",
+    "硬件/服务器硬盘选择.md",
+    "如何学习一门技术.md",
+    "2024-07-20.md",
+    "汇总_其它技术/消息队列/kafka/记一次kafka只能生产数据不能消费数据的情况.md",
+    "images/WEBRESOURCEd836ec6be96dd7325ced1f98b55f7aa0截图.png.md",
+    "images",
+    "其它技术大汇总/代码仓库/github/github图床tokens.md",
+    "其它技术大汇总/存储/minio/OEOS listobjectversions.md",
+    "其它技术大汇总/存储/minio/S3 ListParts调研.md",
+    "其它技术大汇总/存储/minio/s3  ListMultipartUploads调研.md",
+    "存储/Ceph/VCMP管理后台/20vcmp开发环境搭建.md",
+    "其它技术/需要看的.md",
+    "其它技术/如何学习一门技术.md",
+    "其它技术/自己动手/7、Jenkins/把项目搭建到华为云上.md",
+    "其它技术/自己动手/7、Jenkins/Mac中jenkins的使用——自动构建 - CSDN博客.md",
+    "其它技术/自己动手/2022年12月ubuntu1/ubuntu22安装ohmyzsh.md",
+    "其它技术/自己动手/7、Jenkins/创建免密登录用户deploy.md",
+    "其它技术/自己动手/2022年12月ubuntu1/动手搭建虚拟机Ubuntu开发环境.md",
+    "其它技术/自己动手/12、Docker/9、利用 Dockerfile 定制镜像.md",
+    "其它技术/自己动手/7、Jenkins",
+    "其它技术/自己动手/2022年12月ubuntu1",
+    "其它技术/自己动手/12、Docker",
+    "其它技术/自己动手/11、项目搭建",
+    "其它技术/自己动手",
+    "其它技术/正则表达式",
+    "其它技术/云原生/docker/dockerfile练手/nginx.conf",
+    "其它技术/云原生/docker/dockerfile练手/redis.conf",
+    "其它技术/云原生/docker/dockerfile练手/epel-7.repo",
+    "其它技术/数据库/Mysql/MySQL优化/mysql优化笔记+资料/索引学习.png",
+    "其它技术/数据库/Mysql/MySQL优化/mysql优化笔记+资料/MySQL服务器调优思路.png",
+    "其它技术/数据库/Mysql/MySQL优化/mysql优化笔记+资料/sql优化.png",
+    "数据库/Mysql/MySQL优化/mysql优化笔记+资料/索引学习.png",
+    "数据库/Mysql/MySQL优化/mysql优化笔记+资料/MySQL服务器调优思路.png",
+    "数据库/Mysql/MySQL优化/mysql优化笔记+资料/sql优化.png"
+  ]
+}

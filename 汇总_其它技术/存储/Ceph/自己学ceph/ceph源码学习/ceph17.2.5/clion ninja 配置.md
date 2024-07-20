@@ -1,0 +1,1 @@
+-G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/runner/clion-2022.3.3/bin/ninja/linux/x64/ninja -DWITH_TESTS=OFF

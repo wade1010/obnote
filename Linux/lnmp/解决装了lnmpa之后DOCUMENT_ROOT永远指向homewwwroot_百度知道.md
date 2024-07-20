@@ -1,0 +1,4 @@
+装了lnmpa之后DOCUMENT_ROOT永远指向/home/wwwroot 问题是这样的：全新的VPS部署，安装lnmp之后正常，修改/usr/local/nginx/conf/nginx.conf如下，可以把root改到其他地方，如下：复制内容到剪贴板代码:server { listen 80; server_name admin.jtam.org; index index.html index.htm index.php; root /home/wwwroot/default;然后重启nginx之后正常，root被改到了/home/wwwroot/default。然后用./apache.sh安装lnmpa，一路正常，重启lnmpa，神马都正确。复制内容到剪贴板代码:[root@tam lnmp0.8]# /usr/local/nginx/sbin/nginx -tnginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is oknginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful然后修改/usr/local/apache/conf/httpd.conf如下：复制内容到剪贴板代码:...DocumentRoot "/home/wwwroot/default"...# This should be changed to whatever you set DocumentRoot to.#...然后无论如何doc root一直指向/home/wwwroot/，修改conf都无效，请问为何会出现这种问题？
+
+搜索了一下，解决了哈vi /usr/local/apache/conf/extra/httpd-vhosts.conf
+

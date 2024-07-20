@@ -1,0 +1,1 @@
+[google]name=Google-x86_64baseurl=http://dl.google.com/linux/rpm/stable/x86_64enabled=1gpgcheck=0gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub

@@ -1,0 +1,1 @@
+sysbench --mysql-host=192.168.100.249 --mysql-port=3306 --test=oltp.lua --oltp_tables_count=10 --oltp-table-size=10000000--rand-init=on --mysql-user=root --mysql-password=password prepare
