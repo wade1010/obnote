@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0a489b91fa9f6e9c",
+        "id": "6a20463463eda103",
         "type": "tabs",
         "children": [
           {
-            "id": "d5b3acbd21a197f6",
+            "id": "8f8f880dec0b3963",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "人工智能/大模型/杂乱.md",
+                "file": "人工智能/大模型/实操练手/SFT数据构建时间.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "人工智能/大模型/杂乱.md",
+                "file": "人工智能/大模型/实操练手/SFT数据构建时间.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "人工智能/大模型/杂乱.md",
+                "file": "人工智能/大模型/实操练手/SFT数据构建时间.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "人工智能/大模型/杂乱.md"
+                "file": "人工智能/大模型/实操练手/SFT数据构建时间.md"
               }
             }
           },
@@ -155,8 +155,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a747eb95b09f8c0a",
+  "active": "8f8f880dec0b3963",
   "lastOpenFiles": [
+    "人工智能/大模型/实操练手/安装LLama-Factory.md",
+    "人工智能/大模型/实操练手/SFT数据构建时间.md",
+    "人工智能/大模型/实操练手/未命名",
+    "人工智能/大模型/杂乱.md",
     "人工智能/大模型/智谱AI-GLM4发布会.md",
     "人工智能/大模型/fastchat使用.md",
     "人工智能/大模型/七月在线/七月博客/为什么Transformer 需要进行Multi-head Attention，即多头注意力机制.md.md",
@@ -184,15 +188,11 @@
     "其它技术大汇总/存储/minio/OEOS listobjectversions.md",
     "其它技术大汇总/存储/minio/S3 ListParts调研.md",
     "其它技术大汇总/存储/minio/s3  ListMultipartUploads调研.md",
-    "存储/Ceph/VCMP管理后台/20vcmp开发环境搭建.md",
-    "其它技术/需要看的.md",
-    "其它技术/如何学习一门技术.md",
     "其它技术/自己动手/7、Jenkins",
     "其它技术/自己动手/2022年12月ubuntu1",
     "其它技术/自己动手/12、Docker",
     "其它技术/自己动手/11、项目搭建",
     "其它技术/自己动手",
-    "其它技术/正则表达式",
     "其它技术/数据库/Mysql/MySQL优化/mysql优化笔记+资料/索引学习.png",
     "其它技术/数据库/Mysql/MySQL优化/mysql优化笔记+资料/MySQL服务器调优思路.png",
     "其它技术/数据库/Mysql/MySQL优化/mysql优化笔记+资料/sql优化.png",
