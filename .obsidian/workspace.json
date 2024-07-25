@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6a20463463eda103",
+        "id": "cb630f9ca550772e",
         "type": "tabs",
         "children": [
           {
-            "id": "8f8f880dec0b3963",
+            "id": "5657cc40a6e6a990",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "人工智能/大模型/实操练手/SFT数据构建时间.md",
+                "file": "人工智能/大模型/尚硅谷-AI大模型实战训练营/01_机器学习基本概念 .md.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "人工智能/大模型/实操练手/SFT数据构建时间.md",
+                "file": "人工智能/大模型/尚硅谷-AI大模型实战训练营/01_机器学习基本概念 .md.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "人工智能/大模型/实操练手/SFT数据构建时间.md",
+                "file": "人工智能/大模型/尚硅谷-AI大模型实战训练营/01_机器学习基本概念 .md.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "人工智能/大模型/实操练手/SFT数据构建时间.md"
+                "file": "人工智能/大模型/尚硅谷-AI大模型实战训练营/01_机器学习基本概念 .md.md"
               }
             }
           },
@@ -155,10 +155,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "8f8f880dec0b3963",
+  "active": "5657cc40a6e6a990",
   "lastOpenFiles": [
-    "人工智能/大模型/实操练手/安装LLama-Factory.md",
+    "人工智能/大模型/尚硅谷-AI大模型实战训练营/01_机器学习基本概念 .md.md",
+    "人工智能/大模型/尚硅谷-AI大模型实战训练营",
     "人工智能/大模型/实操练手/SFT数据构建时间.md",
+    "人工智能/大模型/实操练手/安装LLama-Factory.md",
     "人工智能/大模型/实操练手/未命名",
     "人工智能/大模型/杂乱.md",
     "人工智能/大模型/智谱AI-GLM4发布会.md",
@@ -187,12 +189,10 @@
     "其它技术大汇总/代码仓库/github/github图床tokens.md",
     "其它技术大汇总/存储/minio/OEOS listobjectversions.md",
     "其它技术大汇总/存储/minio/S3 ListParts调研.md",
-    "其它技术大汇总/存储/minio/s3  ListMultipartUploads调研.md",
     "其它技术/自己动手/7、Jenkins",
     "其它技术/自己动手/2022年12月ubuntu1",
     "其它技术/自己动手/12、Docker",
     "其它技术/自己动手/11、项目搭建",
-    "其它技术/自己动手",
     "其它技术/数据库/Mysql/MySQL优化/mysql优化笔记+资料/索引学习.png",
     "其它技术/数据库/Mysql/MySQL优化/mysql优化笔记+资料/MySQL服务器调优思路.png",
     "其它技术/数据库/Mysql/MySQL优化/mysql优化笔记+资料/sql优化.png",
