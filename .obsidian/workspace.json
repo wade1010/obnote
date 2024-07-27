@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cb630f9ca550772e",
+        "id": "0a489b91fa9f6e9c",
         "type": "tabs",
         "children": [
           {
-            "id": "5657cc40a6e6a990",
+            "id": "d5b3acbd21a197f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "人工智能/大模型/尚硅谷-AI大模型实战训练营/01_机器学习基本概念 .md.md",
+                "file": "人工智能/rain_loss,val_loss变化趋势原因分析.md.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "人工智能/大模型/尚硅谷-AI大模型实战训练营/01_机器学习基本概念 .md.md",
+                "file": "人工智能/rain_loss,val_loss变化趋势原因分析.md.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "人工智能/大模型/尚硅谷-AI大模型实战训练营/01_机器学习基本概念 .md.md",
+                "file": "人工智能/rain_loss,val_loss变化趋势原因分析.md.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "人工智能/大模型/尚硅谷-AI大模型实战训练营/01_机器学习基本概念 .md.md"
+                "file": "人工智能/rain_loss,val_loss变化趋势原因分析.md.md"
               }
             }
           },
@@ -155,44 +155,44 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5657cc40a6e6a990",
+  "active": "d5b3acbd21a197f6",
   "lastOpenFiles": [
-    "人工智能/大模型/尚硅谷-AI大模型实战训练营/01_机器学习基本概念 .md.md",
-    "人工智能/大模型/尚硅谷-AI大模型实战训练营",
-    "人工智能/大模型/实操练手/SFT数据构建时间.md",
-    "人工智能/大模型/实操练手/安装LLama-Factory.md",
-    "人工智能/大模型/实操练手/未命名",
-    "人工智能/大模型/杂乱.md",
-    "人工智能/大模型/智谱AI-GLM4发布会.md",
-    "人工智能/大模型/fastchat使用.md",
+    "人工智能/rain_loss,val_loss变化趋势原因分析.md.md",
+    "人工智能/七月在线/七月博客/为什么Transformer 需要进行Multi-head Attention，即多头注意力机制.md.md",
+    "人工智能/大模型/ZOMI/todo23【AI芯片】NPU芯片/TPU/tpu学习.md",
+    "人工智能/大模型/ZOMI/todo23【AI芯片】NPU芯片/TPU/tpu学习(2).md",
+    "人工智能/大模型/开源大模型/Llama2/初识.md",
+    "人工智能/大模型/开源大模型/Llama2/llama2前脚刚开源我后脚就试试搭建70B.md",
+    "人工智能/大模型/开源大模型/Llama2/Llama2-Chinese-13b-Chat搭建.md",
+    "人工智能/大模型/开源大模型/ChatGLM/首次学习.md",
+    "人工智能/大模型/开源大模型/ChatGLM/ptuningv2使用自定义语料微调chatglm2.md",
+    "人工智能/大模型/开源大模型/ChatGLM/lora微调chatglm2分享.md",
+    "人工智能/大模型/开源大模型/ChatGLM/lora微调chatglm2.md",
+    "人工智能/大模型/开源大模型/ChatGLM/chatglm报错Loading modelsTHUDM_chatglm2-6b requires you to execute the config.md",
+    "人工智能/大模型/开源大模型/ChatGLM/chatglm2微调ptuningv2.md",
+    "人工智能/大模型/开源大模型/ChatGLM/ChatGLM+LangChain.md",
+    "人工智能/大模型/开源大模型/ChatGLM/chatglm web_demo如何开放给其他人用？如何修改端口？.md",
     "人工智能/大模型/七月在线/七月博客/为什么Transformer 需要进行Multi-head Attention，即多头注意力机制.md.md",
-    "人工智能/大模型",
     "人工智能/大模型/七月在线/七月博客/ELMO采用双向结构不就能看到需要预测的单词了么.md.md",
     "人工智能/大模型/七月在线/七月博客/ELMO训练好之后如何给下游任务使用呢.md.md",
+    "人工智能/大模型/ZOMI/todo9【推理系统】整体概述/推理引擎架构.md",
+    "人工智能/大模型/ZOMI/todo23【AI芯片】NPU芯片/TPU",
+    "人工智能/大模型/ZOMI/3【AI框架】分布式并行/学习1.md",
+    "人工智能/大模型/ZOMI/22【AI芯片】黄金十年/学习.md",
+    "人工智能/大模型/ZOMI/20【AI芯片】GPU详解/tensor core架构演进.md",
+    "人工智能/大模型/ZOMI/20【AI芯片】GPU详解/tensor core原理.md",
+    "人工智能/大模型/ZOMI/20【AI芯片】GPU详解/6从nvlink到nvswitch.md",
+    "人工智能/大模型/ZOMI/20【AI芯片】GPU详解/5深入NVLink原理.md",
+    "人工智能/大模型/ZOMI/20【AI芯片】GPU详解/4分布式训练和NVLink关系.md",
+    "人工智能/大模型/开源大模型/Llama2",
+    "人工智能/大模型/开源大模型/ChatGLM",
     "人工智能/大模型/七月在线/七月博客",
-    "汇总_其它技术/其他[总]/vagrant安装系统并root的SSH登录.md",
-    "人工智能/大模型/七月在线",
-    "Python/python杂乱/python模拟登陆之验证码与cookies的同步处理思路-python-Php教程-壹聚教程网.md",
-    "汇总_其它技术/PHP/PHP范类/PHP程序自动运行，windows计划任务.md",
-    "汇总_其它技术/Redis/PHP 操作redis 详细讲解转的 - jackluo - 博客园.md",
-    "汇总_其它技术/存储/oeoshd高密盘.md",
-    "汇总_其它技术/PHP/工具类库/实用代码收集.md",
-    "汇总_其它技术/其他[总]/宝宝起名.md",
-    "硬件/虚拟化/qemu-kvm.md",
-    "硬件/查看系统信息的脚本.md",
-    "硬件/服务器硬盘选择.md",
-    "如何学习一门技术.md",
-    "2024-07-20.md",
-    "汇总_其它技术/消息队列/kafka/记一次kafka只能生产数据不能消费数据的情况.md",
-    "images/WEBRESOURCEd836ec6be96dd7325ced1f98b55f7aa0截图.png.md",
-    "images",
-    "其它技术大汇总/代码仓库/github/github图床tokens.md",
-    "其它技术大汇总/存储/minio/OEOS listobjectversions.md",
-    "其它技术大汇总/存储/minio/S3 ListParts调研.md",
-    "其它技术/自己动手/7、Jenkins",
-    "其它技术/自己动手/2022年12月ubuntu1",
-    "其它技术/自己动手/12、Docker",
-    "其它技术/自己动手/11、项目搭建",
+    "人工智能/大模型/ZOMI/todo9【推理系统】整体概述",
+    "人工智能/大模型/ZOMI/todo23【AI芯片】NPU芯片",
+    "人工智能/大模型/ZOMI/3【AI框架】分布式并行",
+    "人工智能/大模型/ZOMI/22【AI芯片】黄金十年",
+    "人工智能/大模型/ZOMI/20【AI芯片】GPU详解",
+    "人工智能/大模型/ZOMI/19【AI芯片】GPU原理",
     "其它技术/数据库/Mysql/MySQL优化/mysql优化笔记+资料/索引学习.png",
     "其它技术/数据库/Mysql/MySQL优化/mysql优化笔记+资料/MySQL服务器调优思路.png",
     "其它技术/数据库/Mysql/MySQL优化/mysql优化笔记+资料/sql优化.png",
