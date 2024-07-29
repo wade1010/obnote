@@ -4,11 +4,13 @@ conda install jupyterlab
 
 jupyter lab --generate-config
 
-![](D:/download/youdaonote-pull-master/data/Technology/Python/images/WEBRESOURCE55268949fca9390932a3c2fea3570a98截图.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202407291347846.png)
+
 
 ## 设置密码
 
-![](D:/download/youdaonote-pull-master/data/Technology/Python/images/WEBRESOURCE5c228b58e2c1e4aabe370aa3216485ad截图.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202407291347606.png)
+
 
 ```
 from notebook.auth import passwd
@@ -37,4 +39,4 @@ nohup jupyter notebook > /llm/xxxx/nb/jupyter.log 2>&1 &
 
 访问就可以了
 
-![](D:/download/youdaonote-pull-master/data/Technology/Python/images/WEBRESOURCE21f41c71fc6142cac71e06279cdddc87截图.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202407291348309.png)

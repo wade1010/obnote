@@ -42,7 +42,8 @@ jupyter lab --generate-config
 
 argon2:$argon2id$v=19$m=10240,t=10,p=8$mIJLEX7EUXkJ7XbE8uOvPA$L2UGAX6XKsMLsvisIOuvTeh0STaVfydQBN8dPqv2esw
 
-![](D:/download/youdaonote-pull-master/data/Technology/Python/images/WEBRESOURCEefc8772dbdc1ebeee6c9c1c6e18bda91image.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202407291334003.png)
+
 
 ```
 c.ServerApp.allow_remote_access = True
@@ -57,7 +58,8 @@ c.ServerApp.root_dir='/home/cstu/jupyterspace/data'
 
 nohup jupyter lab > xxx.log 2>&1 &
 
-![](D:/download/youdaonote-pull-master/data/Technology/Python/images/WEBRESOURCE89ff5be415f930f87c79928c5e701b40image.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202407291334371.png)
+
 
 # 三、插件
 
@@ -71,7 +73,8 @@ pip install jupyterlab-language-pack-zh-CN -i https://pypi.tuna.tsinghua.edu.cn/
 
 选择语言：
 
-![](D:/download/youdaonote-pull-master/data/Technology/Python/images/WEBRESOURCEf4d63d107f148a561b5d30c2cd756c58stickPicture.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202407291335871.png)
+
 
 ### 自动补全，代码提示
 
@@ -84,9 +87,9 @@ pip install -U jedi-language-server -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 做如下调整：
 
-![](D:/download/youdaonote-pull-master/data/Technology/Python/images/WEBRESOURCEfc7acfc8694ff11e147576378cbe6f7astickPicture.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202407291335725.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202407291335264.png)
 
-![](D:/download/youdaonote-pull-master/data/Technology/Python/images/WEBRESOURCE4ffac4888047a012dfa504b1c04e6d21image.png)
 
 ps:
 
@@ -98,4 +101,4 @@ ps:
 
 根据图形化界面设置后，切换到json,可以看到会增加右边的一些配置
 
-![](D:/download/youdaonote-pull-master/data/Technology/Python/images/WEBRESOURCE23c8bb13b0dfaaa2e5e9c5cea88ea81bimage.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202407291345763.png)
