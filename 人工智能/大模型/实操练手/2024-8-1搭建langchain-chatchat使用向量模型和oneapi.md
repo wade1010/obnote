@@ -57,26 +57,6 @@ wget https://github.com/chatchat-space/Langchain-Chatchat/blob/master/docker/dat
 tar -xvf data.tar.gz
 rm -rf data.tar.gz
 
-6.检查服务启动情况
-docker-compose up -d
-WARN[0000] /root/docker-compose.yaml: `version` is obsolete 
-NAME                IMAGE                           COMMAND                  SERVICE      CREATED         STATUS         PORTS
-root-chatchat-1     chatimage/chatchat:0.3.1.2-2024-0720   "chatchat -a"            chatchat     3 minutes ago   Up 3 minutes   
-root-xinference-1   xprobe/xinference:v0.12.1       "/opt/nvidia/nvidia_…"   xinference   3 minutes ago   Up 3 minutes
-ss -anptl | grep -E '(8501|7861|9997)'
-LISTEN 0      128          0.0.0.0:9997       0.0.0.0:*    users:(("pt_main_thread",pid=1489804,fd=21))
-LISTEN 0      128          0.0.0.0:8501       0.0.0.0:*    users:(("python",pid=1490078,fd=10))        
-LISTEN 0      128          0.0.0.0:7861       0.0.0.0:*    users:(("python",pid=1490014,fd=9))
-如上, 服务均已正常启动, 即可体验使用.
-
-提示: 先登陆 xinference ui http://<your_ip>:9997 启动 llm 和 embedding 后, 再登陆 chatchat ui http://<your_ip>:8501 进行体验.
-
-详细文档:
-
-- Langchain-chatchat 使用请参考: [LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat/blob/master/README.md)
-    
-- Xinference 使用请参考: [欢迎来到 Xinference！](https://inference.readthedocs.io/zh-cn/latest/index.html)
-
 # 映射setttings.py
 修改`docker-compose.yaml`将配置文件setttings.py映射出来
 先将settings.py拷贝出来,拷贝到/root/xxx/langchain-chatchat目录下
@@ -166,22 +146,23 @@ docker-compose up -d
 # 检查服务启动情况[](https://github.com/chatchat-space/Langchain-Chatchat/blob/master/docs/install/README_docker.md#6%E6%A3%80%E6%9F%A5%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E6%83%85%E5%86%B5)
 
 docker-compose up -d
-
-WARN[0000] /root/docker-compose.yaml: `version` is obsolete NAME IMAGE COMMAND SERVICE CREATED STATUS PORTS root-chatchat-1 chatimage/chatchat:0.3.1.2-2024-0720 "chatchat -a" chatchat 3 minutes ago Up 3 minutes root-xinference-1 xprobe/xinference:v0.12.1 "/opt/nvidia/nvidia_…" xinference 3 minutes ago Up 3 minutes
-
+WARN[0000] /root/docker-compose.yaml: `version` is obsolete 
+NAME                IMAGE                           COMMAND                  SERVICE      CREATED         STATUS         PORTS
+root-chatchat-1     chatimage/chatchat:0.3.1.2-2024-0720   "chatchat -a"            chatchat     3 minutes ago   Up 3 minutes   
+root-xinference-1   xprobe/xinference:v0.12.1       "/opt/nvidia/nvidia_…"   xinference   3 minutes ago   Up 3 minutes
 ss -anptl | grep -E '(8501|7861|9997)'
-
-LISTEN 0 128 0.0.0.0:9997 0.0.0.0:* users:(("pt_main_thread",pid=1489804,fd=21)) LISTEN 0 128 0.0.0.0:8501 0.0.0.0:* users:(("python",pid=1490078,fd=10)) LISTEN 0 128 0.0.0.0:7861 0.0.0.0:* users:(("python",pid=1490014,fd=9))
-
+LISTEN 0      128          0.0.0.0:9997       0.0.0.0:*    users:(("pt_main_thread",pid=1489804,fd=21))
+LISTEN 0      128          0.0.0.0:8501       0.0.0.0:*    users:(("python",pid=1490078,fd=10))        
+LISTEN 0      128          0.0.0.0:7861       0.0.0.0:*    users:(("python",pid=1490014,fd=9))
 如上, 服务均已正常启动, 即可体验使用.
 
-提示: 先登陆 xinference ui http://:9997 启动 llm 和 embedding 后, 再登陆 chatchat ui http://:8501 进行体验.
+提示: 先登陆 xinference ui http://<your_ip>:9997 启动 llm 和 embedding 后, 再登陆 chatchat ui http://<your_ip>:8501 进行体验.
 
 详细文档:
 
-Langchain-chatchat 使用请参考: LangChain-Chatchat
-
-Xinference 使用请参考: 欢迎来到 Xinference！
+- Langchain-chatchat 使用请参考: [LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat/blob/master/README.md)
+    
+- Xinference 使用请参考: [欢迎来到 Xinference！](https://inference.readthedocs.io/zh-cn/latest/index.html)
 
 
 # 配置向量模型
@@ -199,3 +180,7 @@ docker logs -f langchain-chatchat-xinference-1
 
 
 使用![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408020957554.png)
+
+
+
+
