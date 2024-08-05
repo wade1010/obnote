@@ -132,6 +132,11 @@ DEFAULT_EMBEDDING_MODEL: str = "bge-large-zh-v1.5"
 有时候后台对应的是chatgpt，但是你不想让用户看到是chatgpt，这里可以起一个你自定义的名字，然后在oneapi那里做一个映射。如下图
 
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408020937590.png)
+
+增加一个chatgpt的text-embedding-ada-002向量模型，如下图
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408021447475.png)
+
+
 另外还要注意，需要将127.0.0.1修改为对应的IP，其它的127.0.0.1如果有需要使用，也改下。
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408020950253.png)
 
