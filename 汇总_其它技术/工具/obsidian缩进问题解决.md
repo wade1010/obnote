@@ -34,3 +34,8 @@ https://forum-zh.obsidian.md/t/topic/28562
 ```
 
 使用方法：
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408051033637.png)
+点击上图右下角目录图标，会打开一个目录，在这个目录下面创建个名字为tab.css（估计别的后缀也行，没测试验证），然后粘贴上面css代码块。
+然后再返回到obsidian，点击上图右下角的刷新，然后打开添加的CSS（上图右下角打开开关）
+
+OK
