@@ -161,3 +161,31 @@ AI反馈(AI Feedback)
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408062144296.png)
 
 
+## 第三部分 更强的LLaMA 2开源，可直接商用
+
+####  LLaMA 2 70B之分组查询注意力——Grouped-Query Attention
+自回归解码的标准做法是缓存序列中先前标记的键 (K) 和值 (V) 对，从而加快注意力计算速度
+然而，随着上下文窗口或批量大小的增加，多头注意力 (MHA)模型中与 KV 缓存大小相关的内存成本显着增长
+
+​​​​​​​对于较大的模型，KV 缓存大小成为瓶颈，键和值投影可以在多个头之间共享，而不会大幅降低性能，可以使用
+
+1、具有单个 KV 投影的原始多查询格式(MQA)
+ChatGLM2-6B即用的这个。
+不过，多查询注意(Multi-query attention，简称MQA)只使用一个键值头，虽大大加快了解码器推断的速度，但MQA可能导致质量下降，而且仅仅为了更快的推理而训练一个单独的模型可能是不可取的
+2、或具有多个 KV 投影的分组查询注意力(grouped-query attention，简称GQA)，速度快 质量高
+23年，还是Google的研究者们提出了一种新的方法，即分组查询注意(GQA，_论文地址为：[GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](https://arxiv.org/pdf/2305.13245 "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints")​​​​​​​_​​​​​​​)，这是一种多查询注意的泛化，它通过折中(多于一个且少于查询头的数量，比如4个键值头的数量，使得经过强化训练的GQA以与MQA相当的速度达到接近多头注意力的质量。
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408062150459.png)
+经实验论证，GQA 变体在大多数评估任务上的表现与 MHA 基线相当，并且平均优于 MQA 变体。
+
+### Llama 2-Chat中的RLHF：依然是三阶段训练方式
+#### 监督微调(SFT)
+**在SFT的数据上**
+1、他们先是重点收集了几千个高质量 SFT 数据示例 (注意：很多新闻稿会说SFT的数据达到百万以上，这就是没仔细看论文的结果，论文之意是胜过百万低质量的数据。
+2、之后发现几万次的SFT标注就足以获得高质量的结果，最终总共收集了27540条用于SFT的标注数据。
+
+**在微调过程中**
+
+1、每个样本都包括一个prompt和一个response(说白了，就是问题-答案对，和instructGPT/ChatGPT本身的监督微调是一个本质)，且为确保模型序列长度得到正确填充，Meta 将训练集中的所有prompt和response连接起来。他们使用一个特殊的 token 来分隔prompt和response片段，利用自回归目标，将来自用户提示的 token 损失归零，因此只对答案 token 进行反向传播，最后对模型进行了 2 次微调
+2、微调过程中的参数则如此设置：we use a cosine learning rate schedule with an initiallearning rate of 2 ×10−5 , a weight decay of 0.1, a batch size of 64, and a sequence length of 4096 token
+微调过程中的参数设置如下：我们使用余弦学习率调度，初始学习率为 2×10−5，权重衰减为 0.1，批次大小为 64，序列长度为 4096 个令牌。
+#### 训练两个奖励模型：一个偏实用 一个偏安全
