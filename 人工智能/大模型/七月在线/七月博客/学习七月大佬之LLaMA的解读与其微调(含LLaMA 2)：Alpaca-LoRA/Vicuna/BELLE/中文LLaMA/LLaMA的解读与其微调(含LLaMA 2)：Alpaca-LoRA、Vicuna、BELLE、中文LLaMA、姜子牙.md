@@ -10,3 +10,6 @@ sentencepiece，sentencepiece是用于tokenizer的工具包
 为了提高训练的稳定性，对每个transformer层的输入进行归一化，而不是对输出进行归一化，RMSNorm是一般layerNorm的一种辩题，可以在梯度下降时令损失更加平滑，与layerNorm相比，RMSNorm的主要区别在于删除了减去均值的部分，只保留了方差部分。
 
 #### SwiGLU替代ReLU
+ReLU函数的输出都是0，对于所有正的输入值，ReLU函数的输出等于输入值本身
+GLU 的基本思想是引入一种称为“门”机制，该机制可以动态地控制信息的流动
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408061024125.png)
