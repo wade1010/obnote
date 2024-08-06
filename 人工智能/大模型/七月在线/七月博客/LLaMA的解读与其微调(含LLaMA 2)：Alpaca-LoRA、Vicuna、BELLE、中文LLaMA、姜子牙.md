@@ -104,3 +104,11 @@ F.linear(input, self.weight, self.bias) + (self.lora_dropout(input) @ self.lora_
 ####  Chinese-LLaMA/Chinese-Alpaca：通过中文数据预训练/指令微调
 
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408062056054.png)
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408062107440.png)
+
+至于如果自己扩建词汇表后，新的词汇表里面还是会存在没有意义的字符文字，有什么办法可以优化吗？这个还是要先看原因的，可能有几个方面
+
+可能是根本的语料问题，新词是根据语料统计得到的，反过来说是语料中的字符频率信息决定新词的发掘，可能要看语料本身有没有问题
+可能是具体实现问题，实施的时候vocabsize一类的阈值参数设置太大，导致连带一些确实没什么意义的长尾词都纳入进新词中了
+也可能是对“无意义”的定义问题，如果你用的是BPE，也比较容易得到一些看上去不太合乎语言学层面的新词，但实际并没有什么影响。
+
