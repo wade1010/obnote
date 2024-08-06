@@ -1,4 +1,4 @@
-### ### LLaMA的模型架构：改造Transformer——RMSNorm/SwiGLU/RoPE
+### LLaMA的模型架构：改造Transformer——RMSNorm/SwiGLU/RoPE
 #### 工具包：
 fairscale是用来做GPU分布的，一般是当使用DDP仍然遇到超显存的问题时使用fairscale
 fire，fire是一个命令行工具，用或者不用他都可以
@@ -35,3 +35,9 @@ SA部分代码实现步骤：
     5.1、对prompt进行tokenize，得到token_ids
     5.2、计算当前batch的最大长度token_len，用来创建输入的token_tensor，最大长度不能超过前文所述的缓存的大小
     5.3、从当前batch中，最短的一个prompt的位置，作为生成的开始位置，开始生成。
+    5.4、输入的token Tensor 传入到transformer模型，计算logits，得到形状为（batch_size，hidden_size）的logits（即transformer的最后一层的输出）。
+    5.5、softmax+top_p采样，得到预测的token，并更新当前位置，准备预测下一个token。
+    5.6、解码得到生成的文本
+
+### LLaMA的Optimizer设计、模型加速优化与微型版本
+在optimizer的设计上，该模型使用AdamW优化器进行训练，超参数设置为β1=0.9，β2=0.95，此外是用cosine淤血学习率的方式，
