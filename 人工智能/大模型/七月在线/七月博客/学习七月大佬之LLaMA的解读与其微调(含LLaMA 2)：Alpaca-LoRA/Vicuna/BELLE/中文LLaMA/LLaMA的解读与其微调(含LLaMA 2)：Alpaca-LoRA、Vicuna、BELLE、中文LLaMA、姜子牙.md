@@ -21,3 +21,17 @@ GLU 的基本思想是引入一种称为“门”机制，该机制可以动态�
 
 其中有一个细节就是缓存机制，它设计的目的是在generate时减少token的重复计算。简单解释一下，就是在计算第n个token特征的时候，需要用到第![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408061036608.png)个token，即每次生成时，需要知道前面所有的过往信息，如果每次都从头算的话，那就会造成极大的浪费，所以就每算一个位置的信息，就把它缓存下来。
 
+SA部分代码实现步骤：
+1、先初始化注意力计算中的三个query、key和value向量的产生。
+2、后forward
+3、基于SwiGLU的前馈网络FFN
+    BART中的FFN用的是fc->act->fc，用了两层全连接
+    GPT中的FFN，用的是conv1D->act->conv1D,也是只用了两层
+    而LLaMA中的FFN采用三个全连接层以实现FFN SwiGLU。
+
+4、将SA和FFN这两部分拼接在一起，形成transformer block
+    最后利用torch的module list将transformer block进行堆叠，拼上最前头的embedding部分，就是一个完整的transformer decoder结构了。
+5、预测下一个token
+    5.1、对prompt进行tokenize，得到token_ids
+    5.2、计算当前batch的最大长度token_len，用来创建输入的token_tensor，最大长度不能超过前文所述的缓存的大小
+    5.3、从当前batch中，最短的一个prompt的位置，作为生成的开始位置，开始生成。
