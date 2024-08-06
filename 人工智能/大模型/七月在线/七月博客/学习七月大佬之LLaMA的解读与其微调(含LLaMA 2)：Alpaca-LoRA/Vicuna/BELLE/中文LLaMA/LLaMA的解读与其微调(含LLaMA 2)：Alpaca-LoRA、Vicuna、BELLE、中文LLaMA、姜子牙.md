@@ -94,3 +94,7 @@ F.linear(input, self.weight, self.bias) + (self.lora_dropout(input) @ self.lora_
 加号左侧为原结构支路，加号右侧为新增支路，_self.lora_right_weight_ 和_self.lora_left_weight_ 分别为两个新引入线性层的参数
 
 
+#### UC Berkeley的Vicuna/FastChat：通过ShareGPT.com的7万条对话数据微调LLaMA
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408061716380.png)
+在数据规模上，Vicuna从ShareGPT.com 的公共 API 收集了大约 70K 用户共享对话，且为了确保数据质量，原作者们将 HTML 转换回 markdown 并过滤掉一些不合适或低质量的样本。此外，将冗长的对话分成更小的部分，以适应模型的最大上下文长度，并做了以下改进：
+1、内存优化，为了是vicuna能够理解长上下文，将最大上下文长度从羊驼alpaca中的512扩展到2048，这大大增加了GPU显存的需求，对此通过利用"梯度检查点"和"闪存注意力"来解决显存的压力。
