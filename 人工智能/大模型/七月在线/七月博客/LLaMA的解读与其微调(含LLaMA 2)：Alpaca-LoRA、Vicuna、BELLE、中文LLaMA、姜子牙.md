@@ -100,3 +100,7 @@ F.linear(input, self.weight, self.bias) + (self.lora_dropout(input) @ self.lora_
 1、内存优化，为了是vicuna能够理解长上下文，将最大上下文长度从羊驼alpaca中的512扩展到2048，这大大增加了GPU显存的需求，对此通过利用"梯度检查点"和"闪存注意力"来解决显存的压力。 (_We tackle the memory pressure by utilizing [gradient checkpointing](https://arxiv.org/pdf/1604.06174 "gradient checkpointing") and [flash attention](https://arxiv.org/pdf/2205.14135 "flash attention")_)
 2、多轮对话：调整训练损失以考虑多轮对话，并仅根据聊天机器人的输出计算微调损失。
 3、通过spot instance降低训练成本。
+
+####  Chinese-LLaMA/Chinese-Alpaca：通过中文数据预训练/指令微调
+
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408062056054.png)
