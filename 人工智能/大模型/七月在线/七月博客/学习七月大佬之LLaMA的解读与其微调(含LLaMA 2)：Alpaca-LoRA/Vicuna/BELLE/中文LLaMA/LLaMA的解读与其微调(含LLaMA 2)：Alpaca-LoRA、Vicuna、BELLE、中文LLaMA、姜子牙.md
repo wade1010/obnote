@@ -78,4 +78,16 @@ LoRA核心思想：用一种低秩的方式来调整参数矩阵。在数学上�
 3、参数变换：将目标层的原始参数矩阵W通过映射矩阵A和逆映射矩阵B进行变换。![W' = W + A * B](https://latex.csdn.net/eq?W%27%20%3D%20W%20&plus;%20A%20*%20B)，这里W'是变换后的参数矩阵。
 4、微调模型：使用新的参数矩阵![W'](https://latex.csdn.net/eq?W%27)替换目标层的原始参数矩阵![W](https://latex.csdn.net/eq?W)，然后在特定任务的训练数据上对模型进行微调。
 5、梯度更新：在微调过程中，计算损失函数关于映射矩阵A和逆映射矩阵B的梯度，并使用优化算法，如Adam、SGD等，对A和B进行更新。
-注意，在更新过程中，原始参数矩阵W保持不变。其实就是训练的时候
+注意，在更新过程中，原始参数矩阵W保持不变。其实就是训练的时候固定原始PLM的参数，只训练降维矩阵A和升维矩阵B。
+6、重复更新：在训练的每个批次中，重复步骤3-5，知道达到预定的训练轮次（epoch）或者满足收敛条件。
+
+总之，LoRA的详细步骤包括选择目标层、初始化映射矩阵和逆映射矩阵、进行参数变换和模型微调。在微调过程中，模型会通过更新映射矩阵A和逆映射矩阵B来学习特定任务的知识，从而提高模型在该任务上的性能
+
+相当于在训练期间，较小的权重矩阵(下图中的A和B)是分开的，但一旦训练完成，权重可以合并到一个新权重矩阵中 』``
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408061349101.png)
+在代码中体现为
+
+```
+F.linear(input, self.weight, self.bias) + (self.lora_dropout(input) @ self.lora_right_weight @ self.lora_left_weight) * self.lora_scaling
+```
+@ 运算符用于矩阵乘法（matrix multiplication）。
