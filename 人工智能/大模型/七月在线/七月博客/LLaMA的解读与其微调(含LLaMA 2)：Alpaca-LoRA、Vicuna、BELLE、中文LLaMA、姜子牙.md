@@ -44,7 +44,7 @@ SA部分代码实现步骤：
 模型加速的设计：首先是，因果多头注意力，可以有效减少内存的使用和计算，具体原理是通过不存储注意力权重和不计算由于语言建模任务的因果性质而被遮盖的键/查询分数来实现的。其次是，减少了check pint的后向传递中重新计算的激活量。最后是，尽可能的重叠激活的计算和GPU之间的网络上的通信。
 
 ## 第二部分 各种微调LLaMA：Alpaca(self-instruct)、Vicuna(shareGPT)、BELLE(self-instruct)
-### 构建self-instruct数据
+#### 构建self-instruct数据
 1、人工设计175个任务，每个任务都有对应的指令{指令 输入 输出/实例}或{指令 输出/实例}，将这175个任务数据作为种子集。
 2、然后提示模型比如GPT3对应的API，使用种子集作为上下文示例来生成更多新的指令
 3、判断该模型生成的指令是否为分类任务
@@ -57,7 +57,7 @@ SA部分代码实现步骤：
 一直重复上述2-6直到种子池有足够多的数据。
 
 
-### 为什么需要梯度累计这个操作？
+#### 为什么需要梯度累计这个操作？
 原因在于batch_size越大，局部数据求得的梯度方向越接近全局的梯度优化方向。那怎么增大batch_size呢？一：可以增加硬件资源，二：通过梯度累积。
 举例说明：假如我们有1000个样本的数据集，将其分成10个小批次，每个小批次包含100个样本。
 - 梯度累积：在每个小批次的训练中，我们会计算出模型参数的梯度，然后将这些梯度累加起来
@@ -103,6 +103,8 @@ F.linear(input, self.weight, self.bias) + (self.lora_dropout(input) @ self.lora_
 
 ####  Chinese-LLaMA/Chinese-Alpaca：通过中文数据预训练/指令微调
 
+##### 词表扩充中文数据
+
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408062056054.png)
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408062107440.png)
 
@@ -112,3 +114,21 @@ F.linear(input, self.weight, self.bias) + (self.lora_dropout(input) @ self.lora_
 可能是具体实现问题，实施的时候vocabsize一类的阈值参数设置太大，导致连带一些确实没什么意义的长尾词都纳入进新词中了
 也可能是对“无意义”的定义问题，如果你用的是BPE，也比较容易得到一些看上去不太合乎语言学层面的新词，但实际并没有什么影响。
 
+##### 加入中文数据的预训练
+
+在预训练阶段，使用约20G左右的通用中文语料（与[中文BERT-wwm](https://github.com/ymcui/Chinese-BERT-wwm "中文BERT-wwm")、[MacBERT](https://github.com/ymcui/MacBERT "MacBERT")、[LERT](https://github.com/ymcui/LERT "LERT")、[PERT](https://github.com/ymcui/PERT "PERT")中使用的语料一致）在原版LLaMA权重的基础上进一步进行预训练。该过程又分为两个阶段：
+第一阶段：冻结transformer参数，仅训练embedding，在尽量不干扰原模型的情况下适配新增的中文词向量
+第二阶段：使用LoRA技术，为模型添加LoRA权重（adapter），训练embedding的同时也更新LoRA参数
+##### 指令精调
+针对一些任务上效果不好，可能有以下几个原因：
+1、本身LLaMA对中文支持不是很好，大多数相关衍生工作时直接在原版上进行pretrain/fine-tune的，而我们采取了更大胆的策略-增加中文词表，可能进一步加剧中文训练不充分的问题，但从长远看是否有利于后续进一步预训练就得靠时间检验了；
+2、指令数据的质量有待进一步提升；
+3、训练时间、超参等方面还有很大的调整空间；
+4、没有RLHF；
+5、4-bit量化后效果可能会下降，因此可以尝试加载BF16模型，效果相对更好一些（也更慢）。
+#### 姜子牙系列模型Ziya-LLaMA-13B-v1
+##### 模型的预训练与微调：预训练、SFT、HFFT
+**继续预训练 Continual pretraining**
+1、数据方面：
+原始数据包含英文和中文，其中英文数据来自openwebtext、Books、Wikipedia和Code，中文数据来自清洗后的悟道数据集、自建的中文数据集。在对原始数据进行去重、模型打分、数据分桶、规则过滤、敏感主题过滤和数据评估后，的最终得到125B tokens的有效数据
+2、分词
