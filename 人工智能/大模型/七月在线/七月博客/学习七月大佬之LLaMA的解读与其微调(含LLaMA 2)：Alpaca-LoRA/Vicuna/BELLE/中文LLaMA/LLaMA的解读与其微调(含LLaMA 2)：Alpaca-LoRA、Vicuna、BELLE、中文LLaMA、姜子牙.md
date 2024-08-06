@@ -91,3 +91,6 @@ LoRA核心思想：用一种低秩的方式来调整参数矩阵。在数学上�
 F.linear(input, self.weight, self.bias) + (self.lora_dropout(input) @ self.lora_right_weight @ self.lora_left_weight) * self.lora_scaling
 ```
 @ 运算符用于矩阵乘法（matrix multiplication）。
+加号左侧为原结构支路，加号右侧为新增支路，_self.lora_right_weight_ 和_self.lora_left_weight_ 分别为两个新引入线性层的参数
+
+
