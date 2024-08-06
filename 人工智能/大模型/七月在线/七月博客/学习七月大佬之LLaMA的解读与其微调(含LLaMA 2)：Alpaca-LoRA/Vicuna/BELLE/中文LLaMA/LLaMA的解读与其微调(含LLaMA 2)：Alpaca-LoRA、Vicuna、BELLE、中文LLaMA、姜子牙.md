@@ -97,4 +97,6 @@ F.linear(input, self.weight, self.bias) + (self.lora_dropout(input) @ self.lora_
 #### UC Berkeley的Vicuna/FastChat：通过ShareGPT.com的7万条对话数据微调LLaMA
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408061716380.png)
 在数据规模上，Vicuna从ShareGPT.com 的公共 API 收集了大约 70K 用户共享对话，且为了确保数据质量，原作者们将 HTML 转换回 markdown 并过滤掉一些不合适或低质量的样本。此外，将冗长的对话分成更小的部分，以适应模型的最大上下文长度，并做了以下改进：
-1、内存优化，为了是vicuna能够理解长上下文，将最大上下文长度从羊驼alpaca中的512扩展到2048，这大大增加了GPU显存的需求，对此通过利用"梯度检查点"和"闪存注意力"来解决显存的压力。
+1、内存优化，为了是vicuna能够理解长上下文，将最大上下文长度从羊驼alpaca中的512扩展到2048，这大大增加了GPU显存的需求，对此通过利用"梯度检查点"和"闪存注意力"来解决显存的压力。 (_We tackle the memory pressure by utilizing [gradient checkpointing](https://arxiv.org/pdf/1604.06174 "gradient checkpointing") and [flash attention](https://arxiv.org/pdf/2205.14135 "flash attention")_)
+2、多轮对话：调整训练损失以考虑多轮对话，并仅根据聊天机器人的输出计算微调损失。
+3、
