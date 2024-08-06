@@ -13,3 +13,11 @@ sentencepiece，sentencepiece是用于tokenizer的工具包
 ReLU函数的输出都是0，对于所有正的输入值，ReLU函数的输出等于输入值本身
 GLU 的基本思想是引入一种称为“门”机制，该机制可以动态地控制信息的流动
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408061024125.png)
+####  Attention计算的总过程
+1. 输入![x](https://latex.csdn.net/eq?x)，分别经过三个Linear得到![x_q, x_k, x_v](https://latex.csdn.net/eq?x_q%2C%20x_k%2C%20x_v)
+2. 在 ![x_q](https://latex.csdn.net/eq?x_q) 和![x_k](https://latex.csdn.net/eq?x_k)中加入旋转位置编码
+3. 缓存 ![x_q](https://latex.csdn.net/eq?x_q) 和 ![x_k](https://latex.csdn.net/eq?x_k) 
+4. 计算![softmax(\frac {QK^T} {\sqrt{d_k}})V](https://latex.csdn.net/eq?softmax%28%5Cfrac%20%7BQK%5ET%7D%20%7B%5Csqrt%7Bd_k%7D%7D%29V)
+
+其中有一个细节就是缓存机制，它设计的目的是在generate时减少token的重复计算。简单解释一下，就是在计算第n个token特征的时候，需要用到第![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408061036608.png)
+个token，即每次生成时，需要知道前面所有的过往信息，如果每次都从头算的话，那就会造成极大的浪费，所以就每算一个位置的信息，就把它缓存下来
