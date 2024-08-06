@@ -130,5 +130,34 @@ F.linear(input, self.weight, self.bias) + (self.lora_dropout(input) @ self.lora_
 ##### 模型的预训练与微调：预训练、SFT、HFFT
 **继续预训练 Continual pretraining**
 1、数据方面：
-原始数据包含英文和中文，其中英文数据来自openwebtext、Books、Wikipedia和Code，中文数据来自清洗后的悟道数据集、自建的中文数据集。在对原始数据进行去重、模型打分、数据分桶、规则过滤、敏感主题过滤和数据评估后，的最终得到125B tokens的有效数据
-2、分词
+原始数据包含英文和中文，其中英文数据来自openwebtext、Books、Wikipedia和Code，中文数据来自清洗后的悟道数据集、自建的中文数据集。在对原始数据进行去重、模型打分、数据分桶、规则过滤、敏感主题过滤和数据评估后，最终得到125B tokens的有效数据
+2、分词方面：
+为了解决LLaMA原生对中文编解码效果低下的问题，我们在LLaMA词表的基础上增加了7k+个常见的中文字，通过和LLaMA原生的词表去重，最终得到一个39410大小的词表，并通过复用transformer里LLaMA Tokenizer来实现这一效果
+3、训练过程
+在增量训练过程中，我们使用了160张40GB的A100，采用2.6M token的训练集采样本数量和FP16的混合精度，吞吐量达到118TFLOP per GPU per second.
+
+训练期间，虽然遇到了机器宕机、底层框架bug、loss spike等各种问题，但我们通过快速调整，保证了增量训练的稳定性。我们也放出训练过程的loss曲线，让大家了解可能出现的问题
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408062136079.png)
+##### 多任务有监督微调 Supervised finetuning
+在多任务有监督微调阶段，采用了课程学习(curiculum learning)和增量训练( incremental training)的策略，用大模型辅助划分已有的数据难度，然后通过“Easy To Hard”的方式，分多个阶段进行SFT训练。
+SFT训练数据包含多个高质量的数据集，均经过人工筛选和校验：
+- Self-Instruct构造的数据（约2M）：BELLE、Alpaca、Alpaca-GPT4等多个数据集
+- 内部收集Code数据（300K）：包含leetcode、多种Code任务形式
+- 内部收集推理/逻辑相关数据（500K）：推理、申论、数学应用题、数值计算等
+- 中英平行语料（2M）：中英互译语料、COT类型翻译语料、古文翻译语料等
+- 多轮对话语料（500K）：Self-Instruct生成、任务型多轮对话、Role-Playing型多轮对话等
+
+
+##### 人类反馈学习 Human-Feedback training
+为了进一步提升模型的综合表现，使其能够充分理解人类意图、减少“幻觉”和不安全的输出，基于指令微调后的模型，进行了人类反馈训练（Human-Feedback Training，HFT）。在训练中，我们采用了以人类反馈强化学习（RM、PPO）为主，结合多种其他手段联合训练的方法用来弥补PPO方法的短板、加速训练，具体包括
+
+人类反馈微调(Human-Feedback Fine-tuning，HFFT)
+后见链微调(Chain-of-Hindsight Fine-tuning，COHFT）
+AI反馈(AI Feedback)
+基于规则的奖励系统(Rule-based Reward System，RBRS)等
+我们在内部自研的框架上实现了HFT的训练流程，该框架可以利用最少8张40G的A100显卡完成Ziya-LLaMA-13B-v1的全参数训练。在PPO训练中，我们没有限制生成样本的长度，以确保长文本任务的奖励准确性。每次训练的总经验池尺寸超过100k样本，确保了训练的充分性。
+
+##### 基于LLaMA微调的各模型对比
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408062144296.png)
+
+
