@@ -51,3 +51,9 @@ class SublayerConnection(nn.Module):
         return x + self.dropout(sublayer(self.norm(x)))
 ```
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071006444.png)
+
+layer nomalization，通过对层的激活值(通常指的是神经网络中各个神经元的输出。这些输出是通过将输入数据与权重相乘并加上偏置后，再通过一个激活函数（如ReLU、Sigmoid或Tanh）计算得到的。)的归一化,可以加速模型的训练过程，使其更快的收敛。
+#### 缩放点积注意力(Scaled Dot-Product Attention)
+整体实现步骤：
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071015778.png)
+1、计算每个单词与其它单词之间的相似度，会拿<font color="#c00000">每个单词/token的Q向量</font>与包括自身在内的所有单词/token的K
