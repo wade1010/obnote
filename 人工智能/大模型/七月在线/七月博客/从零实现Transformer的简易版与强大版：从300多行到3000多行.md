@@ -19,3 +19,11 @@
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408070914918.png)
 然后乘以三个权重矩阵得
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408070915402.png)
+为此，我们可以先创建4个相同的线性层，每个线性层都具有 d_model 的输入维度和 d_model 的输出维度
+
+        
+```
+self.linears = clones(nn.Linear(d_model, d_model), 4) 
+```
+
+前三个线性层分别用于对 Q向量、K向量、V向量进行线性变换(至于这第4个线性层在随后的第3点)
