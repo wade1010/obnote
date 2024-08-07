@@ -116,4 +116,6 @@ N可以是多份，比如6。
 ### Masked Multi-Head Self-attention
 1、输入经过embedding+位置编码后，还是乘以三个不同的权重矩阵：$W^Q$、$W^K$、$W^V$，依次得到三个不同的矩阵输入：Q、K、V。
 2、Q矩阵乘以K矩阵的装置$K^T$，得到$Q⋅K^T$，注意，紧接着$Q⋅K^T$会乘以一个mask矩阵，得到masked attention矩阵
-3、masked attention矩阵经过softmax后，乘以V矩阵得到$Z_1$矩阵
+3、masked attention矩阵经过softmax后，乘以V矩阵得到$Z_i$矩阵
+4、比如多头取2，最终把$Z_1、Z_2$拼接之后，在做一个linear变换得到最终的$Z$矩阵。
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071202946.png)
