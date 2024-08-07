@@ -56,4 +56,23 @@ layer nomalization，通过对层的激活值(通常指的是神经网络中各�
 #### 缩放点积注意力(Scaled Dot-Product Attention)
 整体实现步骤：
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071015778.png)
-1、计算每个单词与其它单词之间的相似度，会拿<font color="#c00000">每个单词/token的Q向量</font>与包括自身在内的所有单词/token的K
+1、计算每个单词与其它单词之间的相似度，会拿<font color="#c00000">每个单词/token的Q向量</font>与<font color="#00b050">包括自身在内的所有单词/token的K向量</font>一一做点积（两个向量之间的点积结果可以代表两个向量的相似度）。
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071018445.png)
+对应到矩阵的形式上，则是矩阵Q与K矩阵的转置做相乘  
+还是拿上面那个例子：「我想吃酸菜鱼」，则Q乘以K的转置![K^T](https://latex.csdn.net/eq?K%5ET)如下图所示
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071019976.png)
+最终得到的![QK^T](https://latex.csdn.net/eq?QK%5ET)矩阵由6行6列，从上往下，逐行来看的花，每一个格子里都会有一个数值，每一个数值一次代表：
+单词我与「我 想 吃 酸 菜 鱼」各自的点积结果或相似度，比如可能是0.3 0.2 0.2 0.1 0.1 0.1，代表编码1时放在「我 想 吃 酸 菜 鱼」上面的注意力大小
+同时，可以看到模型在对当前位置的信息进行编码时，会过度的将注意力集中于自身的位置(当然 这无可厚非，毕竟自己与自己最相似嘛)，而可能忽略了其它位置。很快你会看到，作者采取的一种解决方案就是采用多头注意力机制(Multi-Head Attention)
+  想与「我 想 吃 酸 菜 鱼」各自的点积结果或相似度
+  吃与「我 想 吃 酸 菜 鱼」各自的点积结果或相似度
+  酸与「我 想 吃 酸 菜 鱼」各自的点积结果或相似度
+  菜与「我 想 吃 酸 菜 鱼」各自的点积结果或相似度
+  鱼与「我 想 吃 酸 菜 鱼」各自的点积结果或相似度​
+
+然后做缩放（除以![\sqrt{d_k}](https://latex.csdn.net/eq?%5Csqrt%7Bd_k%7D)）。
+
+接着使用softmax，如下公式
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071022894.png)
+使用softmax计算每一个单词对包括自身在内所有单词的attention值，这些值加起来和为1（相当于起到一个归一化的效果）
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071025815.png)
