@@ -1,5 +1,6 @@
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408070904923.png)
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408070904980.png)
+## 从零实现Transformer编码器模块
 ### 关于输入的处理：针对输入做embedding，然后加上位置编码
 #### 针对输入做embedding
 对于模型来说了，输入的每一句话，在模型中都是一个词向量，但是每句话都是输入的时候才去生成对应的项链，这处理起来无疑是会费时费力，所以在实际应用中，我们会实现训练好各种embedding矩阵，这些embedding矩阵包含常用领域常用单词的向量化表示，且提前做好分词。
@@ -93,3 +94,7 @@ layer nomalization，通过对层的激活值(通常指的是神经网络中各�
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071051008.png)
 如果是更多的头，比如8个头，计算步骤也是一样的，最终把每个头得到的结果直接concat，最后经过一个linear变换，得到最终的输出，整体结果如下所示：
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071100601.png)
+#### Position-wise前馈网络的实现
+前面，逐一实现了embedding、位置编码、缩放点积/多头注意力，以及Add和Norm，整个编码器部分还剩下最后一个模块，即下图框里的Feed Forward Network(FFN)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071112831.png)
+其中包括两个线性层变换：维度上先扩大后缩小，最终输入和输出的维度数为
