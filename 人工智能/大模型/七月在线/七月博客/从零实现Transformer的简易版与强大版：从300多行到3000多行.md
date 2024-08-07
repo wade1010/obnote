@@ -31,4 +31,4 @@ self.linears = clones(nn.Linear(d_model, d_model), 4)
 聚焦transformer原图，输入通过embedding和位置编码后，先后做了两个步骤
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408070938964.png)
 1、针对query向量做MHA，得到的结果与原query向量，先相加，然后做归一化。
-这个相加，就是residual connection（）
+这个相加，就是residual connection（残差连接）。是为了解决多层神经网络训练困难的问题，通过将前一层的信息无差的传递到下一层，可以有效的仅关注差异部分，这一方法之前在图像处理结构，如ResNet等中常常用到。
