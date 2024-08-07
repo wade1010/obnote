@@ -97,5 +97,5 @@ layer nomalization，通过对层的激活值(通常指的是神经网络中各�
 #### Position-wise前馈网络的实现
 前面，逐一实现了embedding、位置编码、缩放点积/多头注意力，以及Add和Norm，整个编码器部分还剩下最后一个模块，即下图框里的Feed Forward Network(FFN)
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071112831.png)
-其中包括两个线性层变换：维度上先扩大后缩小，最终输入和输出的维度数为
-$$d_{model}$$
+其中包括两个线性层变换：维度上先扩大后缩小，最终输入和输出的维度数为$d_{model}=512$ ,内层维度为$d_{ff} = 2048$
+ 
