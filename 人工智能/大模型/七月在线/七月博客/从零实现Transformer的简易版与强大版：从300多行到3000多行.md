@@ -114,4 +114,6 @@ N可以是多份，比如6。
 - 最后做下linear变换后，通过softmax层计算下一个目标单词的概率。
 
 ### Masked Multi-Head Self-attention
-1、输入经过embedding+位置编码后，还是乘以三个不同的权重矩阵：$W^Q$、$W^K$、$W$
+1、输入经过embedding+位置编码后，还是乘以三个不同的权重矩阵：$W^Q$、$W^K$、$W^V$，依次得到三个不同的矩阵输入：Q、K、V。
+2、Q矩阵乘以K矩阵的装置$K^T$，得到$Q⋅K^T$，注意，紧接着$Q⋅K^T$会乘以一个mask矩阵，得到masked attention矩阵
+3、masked attention矩阵经过softmax后，乘以V矩阵得到$Z_1$矩阵
