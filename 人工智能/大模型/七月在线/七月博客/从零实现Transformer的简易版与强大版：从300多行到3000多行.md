@@ -97,5 +97,21 @@ layer nomalization，通过对层的激活值(通常指的是神经网络中各�
 #### Position-wise前馈网络的实现
 前面，逐一实现了embedding、位置编码、缩放点积/多头注意力，以及Add和Norm，整个编码器部分还剩下最后一个模块，即下图框里的Feed Forward Network(FFN)
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071112831.png)
-其中包括两个线性层变换：维度上先扩大后缩小，最终输入和输出的维度数为$d_{model}=512$ ,内层维度为$d_{ff} = 2048$
- 
+其中包括两个线性层变换：维度上先扩大后缩小，最终输入和输出的维度数为$d_{model}=512$ ,内层维度为$d_{ff} = 2048$，过程中使用ReLU作为激活函数。
+
+### 对整个transformer  block复制N份最终成整个encode模块
+N可以是多份，比如6。
+
+## 从零实现Transformer解码器模块
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071139899.png)
+回顾下解码器，从底至上：
+- 输入包括2部分，下方是前一个时间步的输出的embedding再加上一个表示位置的positional encoding
+- 接着是masked multi-head self-attention
+![](https://gitee.com/hxc8/images10/raw/master/img/202408071140971.png)
+然后做Add&Norm
+- 再往上是一个不带mask的mult-head attention层，它的key、value矩阵使用encoder的编码信息矩阵，而query使用'上一个'Decode Block的输出。然后再做一Add&Norm
+- 经过FFN层，也做一下Add&Norm
+- 最后做下linear变换后，通过softmax层计算下一个目标单词的概率。
+
+### Masked Multi-Head Self-attention
+1、输入经过embedding+位置编码后，还是乘以三个不同的权重矩阵：$W^Q$、$W^K$、$W$
