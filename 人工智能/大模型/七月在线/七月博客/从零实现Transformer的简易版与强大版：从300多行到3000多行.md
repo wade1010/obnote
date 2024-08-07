@@ -32,3 +32,22 @@ self.linears = clones(nn.Linear(d_model, d_model), 4)
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408070938964.png)
 1、针对query向量做MHA，得到的结果与原query向量，先相加，然后做归一化。
 这个相加，就是residual connection（残差连接）。是为了解决多层神经网络训练困难的问题，通过将前一层的信息无差的传递到下一层，可以有效的仅关注差异部分，这一方法之前在图像处理结构，如ResNet等中常常用到。
+具体编码时是通过SublayerConnection函数实现此功能的
+
+```
+"""一个残差连接（residual connection），后面跟着一个层归一化(layer normalization)操作"""
+class SublayerConnection(nn.Module):
+    # 初始化函数，接收size（层的维度大小）和dropout（dropout率）作为输入参数
+    def __init__(self, size, dropout):
+        super(SublayerConnection, self).__init__()  # 调用父类nn.Module的构造函数
+        self.norm = LayerNorm(size)                 # 定义一个层归一化(Layer Normalization)操作，使用size作为输入维度
+        self.dropout = nn.Dropout(dropout)          # 定义一个dropout层
+ 
+    # 定义前向传播函数，输入参数x是输入张量，sublayer是待执行的子层操作
+    def forward(self, x, sublayer):  
+        # 将残差连接应用于任何具有相同大小的子层
+        # 首先对输入x进行层归一化，然后执行子层操作（如self-attention或前馈神经网络）
+        # 接着应用dropout，最后将结果与原始输入x相加。
+        return x + self.dropout(sublayer(self.norm(x)))
+```
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071006444.png)
