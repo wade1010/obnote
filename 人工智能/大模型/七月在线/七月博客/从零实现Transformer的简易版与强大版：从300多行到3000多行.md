@@ -26,7 +26,7 @@
 self.linears = clones(nn.Linear(d_model, d_model), 4) 
 ```
 
-前三个线性层分别用于对 Q向量、K向量、V向量进行线性变换(至于这第4个线性层在随后的第3点)
+前三个线性层分别用于对 Q向量、K向量、V向量进行线性变换(至于这第4个线性层在随后的第3点用到（输出线性层，其实就是多头初一里的输出进行整合，得到最终多头注意力的输出）)
 ### 对输入和Multi-Head Attention做Add&Norm，再对上步输出和Feed Forward做Add&Norm
 聚焦transformer原图，输入通过embedding和位置编码后，先后做了两个步骤
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408070938964.png)
@@ -91,3 +91,5 @@ layer nomalization，通过对层的激活值(通常指的是神经网络中各�
 #### 多头注意力(Multi-Head Attention)
 公式不会写，这里就直接截图学习了。
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071051008.png)
+如果是更多的头，比如8个头，计算步骤也是一样的，最终把每个头得到的结果直接concat，最后经过一个linear变换，得到最终的输出，整体结果如下所示：
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071100601.png)
