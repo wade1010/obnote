@@ -27,3 +27,4 @@ self.linears = clones(nn.Linear(d_model, d_model), 4)
 ```
 
 前三个线性层分别用于对 Q向量、K向量、V向量进行线性变换(至于这第4个线性层在随后的第3点)
+### 对输入和Multi-Head Attention做Add&Norm，再对上步输出和Feed Forward做Add&Norm
