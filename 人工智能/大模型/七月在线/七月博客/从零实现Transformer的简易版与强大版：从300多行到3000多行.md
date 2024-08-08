@@ -119,3 +119,9 @@ N可以是多份，比如6。
 3、masked attention矩阵经过softmax后，乘以V矩阵得到$Z_i$矩阵
 4、比如多头取2，最终把$Z_1、Z_2$拼接之后，在做一个linear变换得到最终的$Z$矩阵。
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408071202946.png)
+### 编码器与解码器的协同
+1、encoder中的QKV全部来自于上一层单元的输出，而decoder中只有Q来自上一层decoder单元输出，K与V都来自于encoder最后一层的输出，也就是说，decoder是要通过当前状态与encoder的输出算出权重后（计算query与各个key的相似度），最后encoder的编码加权得到下一层的状态。
+
+比如当我们要把“hello world”翻译为"你好,世界"时，decoder会计算“你好”这个query分别于"hello"、“world”这两个key的相似度，很明显，"你好"与“hello”更相似，从而给“Hello”更大的权重，从而把“你好”对应到“hello”，达到的效果就是“hello”翻译为”你好“
+
+2、且在解码器中
