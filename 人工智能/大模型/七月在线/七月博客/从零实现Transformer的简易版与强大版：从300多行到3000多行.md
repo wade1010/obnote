@@ -128,3 +128,6 @@ N可以是多份，比如6。
 
 
 ## 第三部分 Transformer的整个训练过程：预处理与迭代
+#### Adam优化器：自动调整学习率并具有动量效应
+优化器用于在训练过程中更新模型参数以使最小化损失函数，而Adam(Adaptive Moment Estimation)是一种常用的优化器，它结合了两种传统优化算法的优点：Momentum和RMSprop
+
