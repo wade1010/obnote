@@ -94,7 +94,8 @@ python web/manage.py makemigrations vclusters
 如果报错
 
 ```
-ModuleNotFoundError: No module named 'gunicorn'
+
+ModuleNotFoundError: No module named 'gunicorn'
 ```
 
 pip install gunicorn
