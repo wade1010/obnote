@@ -41,7 +41,7 @@
      ```bash
      sudo apt-get install nvidia-driver-XXX
      ```
-     其中 `XXX` 是推荐的驱动程序版本号。
+     其中 `XXX` 是推荐的驱动程序版本号。我一般选择最大的那个版本号
 
 3. **重启系统（最好重启）**：
    ```bash
