@@ -52,3 +52,64 @@ queries, keys, values = qkv
 通过 `permute` 方法，我们将 `qkv` 张量的形状从 `(b, num_tokens, 3, num_heads, head_dim)` 转换为 `(3, b, num_heads, num_tokens, head_dim)`。然后，通过简单的索引操作，我们将这个张量拆分为三个独立的张量 `queries`、`keys` 和 `values`，每个张量的形状都是 `(b, num_heads, num_tokens, head_dim)`。
 
 这种拆分操作在多头注意力机制中非常常见，因为它允许我们分别处理查询、键和值，从而计算注意力分数和加权和。
+
+## batch_first=True
+- **含义**：是否将批量大小（batch size）作为输入张量的第一个维度。
+    
+- **作用**：如果设置为 `True`，则输入和输出的形状为 `(batch_size, sequence_length, embedding_dim)`。如果设置为 `False`，则输入和输出的形状为 `(sequence_length, batch_size, embedding_dim)`。
+
+
+下面是详细解释 ：
+
+batch_first` 参数在 `nn.MultiheadAttention` 模块中是一个非常重要的配置选项，它决定了输入和输出张量的维度顺序。让我们详细解释一下这个参数的作用和影响。
+### 默认行为（`batch_first=False`）
+
+在默认情况下，`batch_first` 参数设置为 `False`。这意味着输入和输出张量的维度顺序为：
+
+- **输入张量**：`(sequence_length, batch_size, embedding_dim)`
+- **输出张量**：`(sequence_length, batch_size, embedding_dim)`
+
+具体来说：
+- `sequence_length` 是序列中的标记数量。
+- `batch_size` 是批量大小。
+- `embedding_dim` 是每个标记的嵌入维度。
+
+这种维度顺序是传统的 RNN 和 Transformer 模型的默认顺序，其中序列长度是第一个维度，批量大小是第二个维度。
+
+### `batch_first=True`
+
+当我们将 `batch_first` 参数设置为 `True` 时，输入和输出张量的维度顺序会发生变化：
+
+- **输入张量**：`(batch_size, sequence_length, embedding_dim)`
+- **输出张量**：`(batch_size, sequence_length, embedding_dim)`
+
+具体来说：
+- `batch_size` 是批量大小，现在是第一个维度。
+- `sequence_length` 是序列中的标记数量，现在是第二个维度。
+- `embedding_dim` 是每个标记的嵌入维度，现在是第三个维度。
+
+这种维度顺序更符合大多数深度学习框架和应用程序的习惯，特别是在处理批量数据时更加直观。
+
+### 示例
+
+假设我们有一个批量大小为 `2`，序列长度为 `3`，嵌入维度为 `4` 的输入张量 `x`。
+
+#### 默认行为（`batch_first=False`）
+
+```python
+x = torch.randn(3, 2, 4)
+# x 的形状为 (sequence_length, batch_size, embedding_dim)
+# 即 (3, 2, 4)
+```
+
+#### `batch_first=True`
+
+```python
+x = torch.randn(2, 3, 4)
+# x 的形状为 (batch_size, sequence_length, embedding_dim)
+# 即 (2, 3, 4)
+```
+
+### 总结
+
+`batch_first` 参数决定了输入和输出张量的维度顺序。当设置为 `True` 时，批量大小是第一个维度，这更符合大多数深度学习框架和应用程序的习惯。当设置为 `False` 时，序列长度是第一个维度，这是传统的 RNN 和 Transformer 模型的默认顺序。选择合适的设置可以提高代码的可读性和一致性。
