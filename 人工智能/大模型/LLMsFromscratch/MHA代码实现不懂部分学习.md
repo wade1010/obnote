@@ -119,3 +119,147 @@ x = torch.randn(2, 3, 4)
 self.register_buffer 是 PyTorch 中用于注册一个持久化的缓冲区的方法。缓冲区是模型的一部分，但它不会被视为模型参数，因此不会在调用 optimizer.step() 时更新。缓冲区通常用于存储一些不需要梯度更新但需要在不同训练和推理过程中保持一致的值。
 
 ## need_weights
+在 PyTorch 的 `nn.MultiheadAttention` 模块中，`need_weights` 参数用于控制是否返回注意力权重（attention weights）。让我们详细解释一下这个参数的作用和影响。
+
+### `need_weights` 参数
+
+`need_weights` 是一个布尔值参数，默认值为 `True`。它决定了 `nn.MultiheadAttention` 模块在执行前向传播时是否返回注意力权重。
+
+- **`need_weights=True`**：模块会返回两个值，第一个是注意力机制的输出张量，第二个是注意力权重张量。
+- **`need_weights=False`**：模块只会返回注意力机制的输出张量，不会返回注意力权重张量。
+
+### 代码示例
+
+在给定的代码示例中，我们创建了一个 `MHAPyTorchClass` 实例，并将 `need_weights` 参数设置为 `False`：
+
+```python
+mha_pytorch_class_noweights = MHAPyTorchClass(
+    d_in=embed_dim,
+    d_out=embed_dim,
+    context_length=context_len,
+    dropout=0.0,
+    num_heads=12,
+    qkv_bias=False,
+    need_weights=False
+).to(device)
+```
+
+然后，我们调用这个实例的前向传播方法：
+
+```python
+out = mha_pytorch_class_noweights(embeddings)
+print(out.shape)
+```
+
+### 解释
+
+1. **实例化 `MHAPyTorchClass`**：
+   ```python
+   mha_pytorch_class_noweights = MHAPyTorchClass(
+       d_in=embed_dim,
+       d_out=embed_dim,
+       context_length=context_len,
+       dropout=0.0,
+       num_heads=12,
+       qkv_bias=False,
+       need_weights=False
+   ).to(device)
+   ```
+   这里我们创建了一个 `MHAPyTorchClass` 实例，并将其移动到指定的设备（如 GPU）。参数 `need_weights=False` 表示我们不需要返回注意力权重。
+
+2. **前向传播**：
+   ```python
+   out = mha_pytorch_class_noweights(embeddings)
+   ```
+   调用 `mha_pytorch_class_noweights` 的前向传播方法，传入输入张量 `embeddings`。由于 `need_weights=False`，这个方法只会返回注意力机制的输出张量 `out`，不会返回注意力权重。
+
+3. **输出形状**：
+   ```python
+   print(out.shape)
+   ```
+   打印输出张量 `out` 的形状。由于我们没有返回注意力权重，`out` 的形状将是 `(batch_size, sequence_length, embedding_dim)`，其中：
+   - `batch_size` 是批量大小。
+   - `sequence_length` 是序列长度。
+   - `embedding_dim` 是嵌入维度。
+
+### 总结
+
+`need_weights` 参数控制 `nn.MultiheadAttention` 模块是否返回注意力权重。当设置为 `False` 时，模块只会返回注意力机制的输出张量，不会返回注意力权重张量。这在某些情况下可以减少内存占用和计算开销，特别是当我们不需要注意力权重进行进一步分析或可视化时。
+如果 `need_weights=True`，`nn.MultiheadAttention` 模块会在前向传播时返回两个值：注意力机制的输出张量和注意力权重张量。让我们详细解释一下这个情况。
+
+### `need_weights=True` 的情况
+
+假设我们将 `need_weights` 参数设置为 `True`：
+
+```python
+mha_pytorch_class_withweights = MHAPyTorchClass(
+    d_in=embed_dim,
+    d_out=embed_dim,
+    context_length=context_len,
+    dropout=0.0,
+    num_heads=12,
+    qkv_bias=False,
+    need_weights=True
+).to(device)
+```
+
+然后，我们调用这个实例的前向传播方法：
+
+```python
+out, attn_weights = mha_pytorch_class_withweights(embeddings)
+print(out.shape)
+print(attn_weights.shape)
+```
+
+### 解释
+
+1. **实例化 `MHAPyTorchClass`**：
+   ```python
+   mha_pytorch_class_withweights = MHAPyTorchClass(
+       d_in=embed_dim,
+       d_out=embed_dim,
+       context_length=context_len,
+       dropout=0.0,
+       num_heads=12,
+       qkv_bias=False,
+       need_weights=True
+   ).to(device)
+   ```
+   这里我们创建了一个 `MHAPyTorchClass` 实例，并将其移动到指定的设备（如 GPU）。参数 `need_weights=True` 表示我们需要返回注意力权重。
+
+2. **前向传播**：
+   ```python
+   out, attn_weights = mha_pytorch_class_withweights(embeddings)
+   ```
+   调用 `mha_pytorch_class_withweights` 的前向传播方法，传入输入张量 `embeddings`。由于 `need_weights=True`，这个方法会返回两个值：
+   - `out`：注意力机制的输出张量。
+   - `attn_weights`：注意力权重张量。
+
+3. **输出形状**：
+   ```python
+   print(out.shape)
+   print(attn_weights.shape)
+   ```
+   打印输出张量 `out` 和注意力权重张量 `attn_weights` 的形状。
+
+   - **`out` 的形状**：`(batch_size, sequence_length, embedding_dim)`，其中：
+     - `batch_size` 是批量大小。
+     - `sequence_length` 是序列长度。
+     - `embedding_dim` 是嵌入维度。
+
+   - **`attn_weights` 的形状**：`(batch_size, num_heads, sequence_length, sequence_length)`，其中：
+     - `batch_size` 是批量大小。
+     - `num_heads` 是注意力头的数量。
+     - `sequence_length` 是序列长度。
+
+### 注意力权重的作用
+
+注意力权重张量 `attn_weights` 表示在计算注意力时，每个查询（query）对每个键（key）的注意力分数。具体来说：
+- `attn_weights[b, h, i, j]` 表示第 `b` 个批量中，第 `h` 个注意力头，第 `i` 个查询对第 `j` 个键的注意力分数。
+
+注意力权重可以用于可视化注意力机制的分布，帮助理解模型在不同位置之间的关注程度，或者用于其他分析目的。
+
+### 总结
+
+当 `need_weights=True` 时，`nn.MultiheadAttention` 模块会返回两个值：注意力机制的输出张量和注意力权重张量。输出张量的形状为 `(batch_size, sequence_length, embedding_dim)`，注意力权重张量的形状为 `(batch_size, num_heads, sequence_length, sequence_length)`。注意力权重可以用于进一步分析和可视化模型的注意力分布。
+
