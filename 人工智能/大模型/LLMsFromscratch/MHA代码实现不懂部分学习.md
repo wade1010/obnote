@@ -263,3 +263,6 @@ print(attn_weights.shape)
 
 当 `need_weights=True` 时，`nn.MultiheadAttention` 模块会返回两个值：注意力机制的输出张量和注意力权重张量。输出张量的形状为 `(batch_size, sequence_length, embedding_dim)`，注意力权重张量的形状为 `(batch_size, num_heads, sequence_length, sequence_length)`。注意力权重可以用于进一步分析和可视化模型的注意力分布。
 
+## keepdim=True
+表示保持结果张量的维度与输入张量一致。这样做的目的是确保结果张量的形状为 (batch, 1)，而不是 (batch,)。
+
