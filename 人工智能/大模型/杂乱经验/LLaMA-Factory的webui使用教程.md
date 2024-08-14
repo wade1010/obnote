@@ -67,3 +67,64 @@ ps aux|grep -v "grep"|grep llamafactory
 ```
 
 和多轮
+
+```json
+{  
+  "instruction": "谢谢",  
+  "input": "",  
+  "output": "不用谢! 很高兴我提供的信息能够帮助到你! 如果还有什么其他问题也可以向我提问。",  
+  "history": [  
+    [  
+      "请你给我写一个面试准备计划，我想要去面试微软的程序员岗位",  
+      "首先，你可以去微软官网寻找招聘信息并申请面试。\n其次，您可以在社交媒体平台寻找微软公司对程序员的面试问题，并做好准备。\n最后，您可以自己对面试过程进行模拟，熟悉话题并减少紧张感。\n我希望你能面试成功。"  
+    ]  
+  ]  
+}
+
+
+```
+
+所以我们训练的数据最好也转换成上述这种格式，然后在 data/dataset_info.json中进行注册
+
+想将该自定义数据集放到我们的系统中使用，则需要进行如下几步操作
+
+进入到项目根目录，输入下面命令
+
+```bash
+cd /root/workspace/LLaMA-Factory
+
+```
+复制该数据集到当前目录下面的data 目录下
+
+然后修改 data/dataset_info.json 新加内容完成注册
+### 示例如下
+加入自定义数据集之前截图如下：![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408141505053.png)
+
+我创建了一个test.json的数据集，然后传到/root/workspace/LLaMA-Factory/data目录下，如下图
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408141506147.png)
+
+然后修改dataset_info.json，输入下面命令
+
+```bash
+vim dataset_info.json
+
+```
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408141506939.png)
+my_test是自定义的名称，将在UI界面显示的名字，file_name填入文件名称，这里是test.json
+
+然后保存即可。
+
+验证数据集是否添加，回到UI页面，刷新下，查看数据集是否增加
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408141506048.png)
+
+验证数据集是否合法：
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408141506029.png)
+能预览即表明合法
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408141506047.png)
+## 训练
+如下图，确保左上角是Train这个tab，然后点击开始即可。这个过程比较漫长，等待即可。
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408141507355.png)
+## 使用模型
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408141507703.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408141507184.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408141507804.png)
