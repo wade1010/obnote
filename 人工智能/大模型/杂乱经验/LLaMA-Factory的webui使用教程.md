@@ -32,3 +32,38 @@ ps aux|grep -v "grep"|grep llamafactory
 ## 训练数据集
 测试时可以使用alpaca_zh_demo，如下图，默认的其它的数据集，在点击训练开始按钮后，会从huggingface下载，这个网站国内是被屏蔽的，直接访问是访问不了的，所以就不要选了。
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408141501657.png)
+### 自定义数据集
+
+数据集的格式要求在不同的阶段是不同的，本教程以sft阶段的数据集需求，将以系统自带的identity数据集和将自定义的一个商品文案生成数据集为例，介绍数据集的使用。更多详情可以在[https://github.com/hiyouga/LLaMA-Factory/blob/main/data/README_zh.md](https://github.com/hiyouga/LLaMA-Factory/blob/main/data/README_zh.md) 中找到相关解释。
+
+系统目前支持 alpaca 和sharegpt两种数据格式，以alpaca为例，整个数据集是一个json对象的list，具体数据格式为
+
+```json
+[  
+  {  
+    "instruction": "用户指令（必填）",  
+    "input": "用户输入（选填）",  
+    "output": "模型回答（必填）",  
+    "system": "系统提示词（选填）",  
+    "history": [  
+      ["第一轮指令（选填）", "第一轮回答（选填）"],  
+      ["第二轮指令（选填）", "第二轮回答（选填）"]  
+    ]  
+  }  
+]
+
+
+```
+例子比如单轮
+
+```json
+{  
+  "instruction": "写一个有效的比较语句",  
+  "input": "篮球和足球",  
+  "output": "篮球和足球都是受欢迎的运动。"  
+}
+
+
+```
+
+和多轮
