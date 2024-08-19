@@ -27,4 +27,15 @@ fp16显存大概占用37GB左右
 
 
 # 模型加载text-generation-webui
-将 模型目录DeepSeek-V2-Lite-Chat
+将 模型目录DeepSeek-V2-Lite-Chat移动到text-generation-webui的根目录下的models下面
+
+然后启动text-generation-webui
+
+```shell
+CUDA_VISIBLE_DEVICES=3 python server.py --listen --trust-remote-code
+```
+
+然后浏览器打开 http://yourip:7860
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408191643697.png)
+然后切换到Chat的tab页面，使用如下
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408191645494.png)
