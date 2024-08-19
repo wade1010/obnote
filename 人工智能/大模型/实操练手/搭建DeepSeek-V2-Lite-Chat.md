@@ -21,3 +21,6 @@ python download.py执行下载，下载流程如下，
 我使用之前搭建好的llama factory加载
 选好模型名称和填好模型在服务器上地址即可
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408191327543.png)
+![屏幕录制 2024-08-19 133427.gif](https://gitee.com/hxc8/images10/raw/master/img/202408191342187.gif)
+fp16显存大概占用37GB左右
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408191345911.png)
