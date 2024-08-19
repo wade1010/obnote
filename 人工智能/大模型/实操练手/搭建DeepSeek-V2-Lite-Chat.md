@@ -39,3 +39,5 @@ CUDA_VISIBLE_DEVICES=3 python server.py --listen --trust-remote-code
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408191643697.png)
 然后切换到Chat的tab页面，使用如下
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408191645494.png)
+此时显卡所占显存如下
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408191751574.png)
