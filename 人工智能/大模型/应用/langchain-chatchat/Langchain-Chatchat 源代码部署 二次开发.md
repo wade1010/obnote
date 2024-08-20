@@ -36,6 +36,7 @@ poetry install -E xinference
 
 # 设置源代码根目录
 如果您在开发时所使用的 IDE 需要指定项目源代码根目录，请将主项目目录(Langchain-Chatchat/libs/chatchat-server/)设置为源代码根目录。
+
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201127300.png)
 
 ### 设置数据目录
@@ -100,3 +101,53 @@ python chatchat/cli.py start -a
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201330667.png)
 启动后
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201331555.png)
+
+
+
+# 二次开发示例
+这里先做一个中间件，后续想在中间件里面做鉴权。
+## 写一个中间件类
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201400462.png)
+
+```python
+  
+class RequestInterceptorMiddleware:  
+    def __init__(self, app):  
+        self.app = app  
+  
+    async def __call__(self, request: Request, call_next):  
+        start_time = time.time()  
+  
+        # 打印请求的 URL 和入参信息  
+        logger.info(f"Request URL: {request.url}")  
+        logger.info(f"Request method: {request.method}")  
+        body = await request.body()  
+        logger.info(f"Request body: {body.decode('utf-8')}")  
+  
+        # 权限判断  
+        if not self.has_permission(request):  
+            from fastapi.responses import JSONResponse  
+            return JSONResponse(status_code=403, content={"detail": "Permission denied"})  
+  
+        # 调用下一个中间件或路由  
+        response = await call_next(request)  
+        process_time = time.time() - start_time  
+        logger.info(f"Processed in {process_time:.4f} seconds")  
+        return response  
+  
+    def has_permission(self, request: Request) -> bool:  
+        # 在这里实现你的权限判断逻辑  
+        # 比如检查请求头中的token，或者用户角色等  
+        auth_header = request.headers.get("Authorization")  
+        if auth_header == "Bearer your_token":  
+            return True  
+        return False
+```
+## 注册这个中间件
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201400924.png)
+
+```python
+app.middleware("http")(RequestInterceptorMiddleware(app))
+```
+启动后，后续每次请求都会进入该方法。如下图
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201402478.png)
