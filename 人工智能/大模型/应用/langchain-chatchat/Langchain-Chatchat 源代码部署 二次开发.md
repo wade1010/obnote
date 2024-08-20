@@ -25,9 +25,5 @@ poetry config virtualenvs.prefer-active-python true
 
 ```shell
 cd  Langchain-Chatchat/libs/chatchat-server/
-poetry install --with lint,test -E xinference
-
-# or use pip to install in editing mode:
-pip install -e .
-
+poetry install -E xinference
 ```
