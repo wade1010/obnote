@@ -81,6 +81,22 @@ python chatchat/cli.py init
 
 ```shell
 cd libs/chatchat-server
-    python chatchat/cli.py kb --recreate-vs
+python chatchat/cli.py kb --recreate-vs
 ```
 如需使用其它 Embedding 模型，或者重建特定的知识库，请查看 python chatchat/cli.py kb --help 了解更多的参数。
+
+上面步骤，我使用pychar来实现的。
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201328691.png)
+执行后，部分结果如下
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201328524.png)
+
+# 启动服务
+
+```shell
+cd libs/chatchat-server
+python chatchat/cli.py start -a
+```
+上面步骤我使用pycharm实现的
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201330667.png)
+启动后
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201331555.png)
