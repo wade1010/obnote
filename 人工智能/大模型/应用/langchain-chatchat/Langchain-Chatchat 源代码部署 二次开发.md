@@ -49,11 +49,15 @@ export CHATCHAT_ROOT=/parth/to/chatchat_data
 ```
 
 windows
+我是用pycharm来实现的
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201313489.png)
 
-```cmd
-cd Langchain-Chatchat/libs/chatchat-server/chatchat
-set CHATCHAT_ROOT=/parth/to/chatchat_data
-```
+Working directory: D:/workespace/Langchain-Chatchat/libs/chatchat-server/chatchat
+environment variables:PYTHONUNBUFFERED=1;CHATCHAT_ROOT=D:\workespace\Langchain-Chatchat\libs\chatchat-server\chatchat\data
+然后断点看看成功没
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201314100.png)
+继续执行，发现
+
 
 
 
