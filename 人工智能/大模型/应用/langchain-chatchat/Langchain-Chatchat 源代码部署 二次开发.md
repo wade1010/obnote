@@ -37,6 +37,26 @@ poetry install -E xinference
 # 设置源代码根目录
 如果您在开发时所使用的 IDE 需要指定项目源代码根目录，请将主项目目录(Langchain-Chatchat/libs/chatchat-server/)设置为源代码根目录。
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201127300.png)
+
+### 设置数据目录
+
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201147703.png)
+
+
+```shell
+cd Langchain-Chatchat/libs/chatchat-server/chatchat
+export CHATCHAT_ROOT=/parth/to/chatchat_data
+```
+
+windows
+
+```cmd
+cd Langchain-Chatchat/libs/chatchat-server/chatchat
+set CHATCHAT_ROOT=/parth/to/chatchat_data
+```
+
+
+
 # 修改chatchat 配置项
 从 `0.3.1` 版本开始，所有配置项改为 `yaml` 文件，具体参考 [Settings](https://github.com/chatchat-space/Langchain-Chatchat/blob/master/docs/contributing/settings.md)。
 
@@ -46,3 +66,5 @@ poetry install -E xinference
 cd libs/chatchat-server
 python chatchat/cli.py init
 ```
+![](https://gitee.com/hxc8/images10/raw/master/img/202408201140516.png)
+
