@@ -27,3 +27,13 @@ poetry config virtualenvs.prefer-active-python true
 cd  Langchain-Chatchat/libs/chatchat-server/
 poetry install -E xinference
 ```
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201120815.png)
+大概执行5分钟左右安装完成
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201121539.png)
+
+# 更新开发部署环境依赖库
+当开发环境中所需的依赖库发生变化时，一般按照更新主项目目录(`Langchain-Chatchat/libs/chatchat-server/`)下的 pyproject.toml 再进行 poetry update 的顺序执行。（这一步暂时没用到，后续二开再用）
+
+# 设置源代码根目录
+如果您在开发时所使用的 IDE 需要指定项目源代码根目录，请将主项目目录(Langchain-Chatchat/libs/chatchat-server/)设置为源代码根目录。
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201127300.png)
