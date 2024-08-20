@@ -53,10 +53,13 @@ windows
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201313489.png)
 
 Working directory: D:/workespace/Langchain-Chatchat/libs/chatchat-server/chatchat
-environment variables:PYTHONUNBUFFERED=1;CHATCHAT_ROOT=D:\workespace\Langchain-Chatchat\libs\chatchat-server\chatchat\data
+environment variables:PYTHONUNBUFFERED=1;CHATCHAT_ROOT=D:\workespace\Langchain-Chatchat\libs\chatchat-server\chatchat
 然后断点看看成功没
-![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201314100.png)
-继续执行，发现
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201317572.png)
+
+继续执行，执行完毕之后，发现会多如下几个内容
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201318036.png)
+
 
 
 
@@ -70,5 +73,14 @@ environment variables:PYTHONUNBUFFERED=1;CHATCHAT_ROOT=D:\workespace\Langchain-C
 cd libs/chatchat-server
 python chatchat/cli.py init
 ```
-![](https://gitee.com/hxc8/images10/raw/master/img/202408201140516.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408201318853.png)
 
+
+# 初始化知识库
+!!!这个命令会清空数据库、删除已有的配置文件，如果您有重要数据，请备份。
+
+```shell
+cd libs/chatchat-server
+    python chatchat/cli.py kb --recreate-vs
+```
+如需使用其它 Embedding 模型，或者重建特定的知识库，请查看 python chatchat/cli.py kb --help 了解更多的参数。
