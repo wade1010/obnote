@@ -6,4 +6,4 @@
 
 - [x] 梳理langchain-chatchat的api ✅ 2024-08-20
 - [x] 本地搭建langchain-chatchat ✅ 2024-08-20
-- [ ] 学习ch05的notebook
+- [x] 学习ch05的notebook ✅ 2024-08-20
