@@ -53,3 +53,4 @@ rerank配置，如下，这里我选择了使用XInference，这个我之前搭�
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261502631.png)
 # 创建知识库
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261528646.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261532934.png)
