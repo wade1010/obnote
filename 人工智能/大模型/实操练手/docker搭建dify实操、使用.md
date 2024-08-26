@@ -111,7 +111,7 @@ rerank配置，如下，这里我选择了使用XInference，这个我之前搭�
 
 把下面ip改成自己的IP，把{api_key}替换成自己刚刚创建的API秘钥
 ```shell
-curl -X POST 'http://192.168.100.13:180/v1/chat-messages' \
+curl -X POST 'http://192.168.1.xxx:180/v1/chat-messages' \
 --header 'Authorization: Bearer app-MMhqyRPIeoeKSXtM2l1vxVPw' \
 --header 'Content-Type: application/json' \
 --data-raw '{
