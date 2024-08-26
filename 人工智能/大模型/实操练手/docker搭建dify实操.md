@@ -47,4 +47,7 @@ rerank配置，如下，这里我选择了使用XInference，这个我之前搭�
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261457920.png)
 验证是否启动，如下图，表明已经启动成功
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261458546.png)
-后续即可回到dify里面继续设置rerank了。
+后续即可回到dify里面继续设置rerank了。服务器URL就填web访问XInference的地址即可。
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261501958.png)
+然后就可以设置rerank了
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261502631.png)
