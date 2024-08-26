@@ -60,3 +60,21 @@ rerank配置，如下，这里我选择了使用XInference，这个我之前搭�
 如上图，可以点击"前往文档"去看下。
 # 创建应用
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262018713.png)
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262031307.png)
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262031759.png)
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262032848.png)
+## 修改工作流
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262033906.png)
+知识检索链接LLM
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262034641.png)
+## 整理节点
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262035107.png)
+整理后如下图
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262035125.png)
+## 配置知识库
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262037558.png)
+选择后如下图
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262038970.png)
+## 设置LLM
+如上面一个步骤一样，点击LLM节点，然后设置上下文，选择result，即为知识检索的结果作为result
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262039240.png)
