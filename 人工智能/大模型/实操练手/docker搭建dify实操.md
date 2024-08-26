@@ -75,6 +75,25 @@ rerank配置，如下，这里我选择了使用XInference，这个我之前搭�
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262037558.png)
 选择后如下图
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262038970.png)
+
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262046120.png)
+
+
 ## 设置LLM
 如上面一个步骤一样，点击LLM节点，然后设置上下文，选择result，即为知识检索的结果作为result
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262039240.png)
+## 设置prompt
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262042505.png)
+设置后，如下图
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262044173.png)
+## 发布
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262044866.png)
+
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262044956.png)
+## 调试和预览
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262048390.png)
+可以分析工作流
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262050025.png)
+
+追踪示例
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262051828.png)
