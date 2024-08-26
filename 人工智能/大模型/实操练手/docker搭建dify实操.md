@@ -35,3 +35,16 @@ sudo vim docker-compose.yaml
 这里我以openai和xinference为例
 点击设置进入到设置模型供应商页面
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261439254.png)
+然后会出现如下图，我这里设置过了，如果没设置点击"OpenAI",![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261450683.png)
+## OpenAI设置
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261450732.png)
+然后点击右上角“系统模型设置”,如下图，你会发现，除了rerank模型，其它的从OpenAI都能选，我这里的openai的APIkey只支持gpt-3.5-turbo，所以就选了这个。最后语音和文本互转的，没试过，不知道我的key支不支持，后续测试下。
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261452708.png)
+## XInference设置
+rerank配置，如下，这里我选择了使用XInference，这个我之前搭建过了，详情可以看我其它笔记，很简单。
+打开XInference，[http://yourip:9997/ui/#/launch_model/rerank](http://yourip:9997/ui/#/launch_model/rerank),我这里选择了 bge-reranker-v2-m3
+我都选择默认的配置，直接点击启动，没一会就能启动，初次需要下载模型，稍微慢点。
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261457920.png)
+验证是否启动，如下图，表明已经启动成功
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261458546.png)
+后续即可回到dify里面继续设置rerank了。
