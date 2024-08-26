@@ -123,5 +123,10 @@ curl -X POST 'http://192.168.100.13:180/v1/chat-messages' \
 }'
 ```
 调用如下图
-![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262108040.png)
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262111348.png)
+
 有返回结果，表明可以使用该API。
+
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262113830.png)
+
+至此简单的使用就完成了。后续高阶用法，有空我也更新下。
