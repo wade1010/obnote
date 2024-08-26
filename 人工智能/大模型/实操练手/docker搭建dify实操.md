@@ -97,3 +97,31 @@ rerank配置，如下，这里我选择了使用XInference，这个我之前搭�
 
 追踪示例
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262051828.png)
+
+# API访问创建的应用
+## 进入应用
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262058521.png)
+## 点击访问API
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262100624.png)
+## 生成API秘钥
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262101299.png)
+## 接口测试
+该页面下面提供了很多接口，这里简单示例下
+### 发送对话消息
+
+把下面ip改成自己的IP，把{api_key}替换成自己刚刚创建的API秘钥
+```shell
+curl -X POST 'http://192.168.100.13:180/v1/chat-messages' \
+--header 'Authorization: Bearer app-MMhqyRPIeoeKSXtM2l1vxVPw' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "inputs": {},
+    "query": "你是谁?",
+    "response_mode": "blocking",
+    "conversation_id": "",
+    "user": "admin"
+}'
+```
+调用如下图
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262108040.png)
+有返回结果，表明可以使用该API。
