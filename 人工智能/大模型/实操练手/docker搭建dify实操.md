@@ -56,3 +56,5 @@ rerank配置，如下，这里我选择了使用XInference，这个我之前搭�
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261532934.png)
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261637137.png)
 上图点击文件后，右边会有预览，然后点击 "下一步"
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261752564.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202408261752344.png)
