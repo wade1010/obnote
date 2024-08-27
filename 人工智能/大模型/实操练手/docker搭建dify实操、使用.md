@@ -127,6 +127,14 @@ curl -X POST 'http://192.168.1.xxx:180/v1/chat-messages' \
 
 有返回结果，表明可以使用该API。
 
+## 网页使用
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262130645.png)
+点击上图的运行，会跳转到一个页面，这里可能是我修改了端口的地方没改全，或者这个系统有点bug，暂时不去细究，如果修改过端口，发现跳转的页面没有端口，就自己加上。
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262131425.png)
+进行提问
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262132933.png)
+
+
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202408262113830.png)
 
 至此简单的使用就完成了。后续高阶用法，有空我也更新下。
