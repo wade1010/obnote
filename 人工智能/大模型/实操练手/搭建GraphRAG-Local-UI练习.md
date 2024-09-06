@@ -59,4 +59,13 @@ vim index_app.py
 打开 Web 浏览器并输入 http://yourip:7862
 
 
+截图如下，感觉还是不美观的
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409062116950.png)
 
+我这里测试，在终端使用下面命令安装了个小模型
+
+```
+ollama run qwen2:1.5b
+或者
+ollama run qwen2:0.5b
+```
