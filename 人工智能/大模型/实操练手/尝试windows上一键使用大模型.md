@@ -10,3 +10,4 @@ conda create -n localai python=3.11
 conda activate localai
 pip install  open-webui
 ```
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409061048074.png)
