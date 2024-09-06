@@ -22,6 +22,18 @@ pip install -r requirements.txt
 ```
 python api.py --host 0.0.0.0 --port 8012 --reload
 ```
+第一次启动，报错如下：
+
+ModuleNotFoundError: No module named 'past'
+解决方法（2024-9-6 20:46:46有这个问题，预计后面会解决的那么白，）
+
+```
+ pip install feature
+```
+
+成功启动，如下
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409062058756.png)
+
 
 如果使用 Ollama 进行嵌入，请启动嵌入代理:
 
