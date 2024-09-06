@@ -62,7 +62,24 @@ vim index_app.py
 截图如下，感觉还是不美观的
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409062116950.png)
 
+# 使用ollama下载模型
 我这里测试，在终端使用下面命令安装了个小模型
+
+下载模型之前可以修改下模型默认保存路径。
+## Linux设置ollama保存模型的路径
+```bash
+sudo mkdir /path/to/ollama/models
+sudo chown -R root:root /path/to/ollama/models
+sudo chmod -R 777 /path/to/ollama/models
+sudo vi /etc/systemd/system/ollama.service
+```
+在[Service]下面添加相应的环境变量Environment，包括OLLAMA_HOST和OLLAMA_MODELS
+
+``````bash
+Environment="OLLAMA_MODELS=/path/to/ollama/models" 
+Environment="OLLAMA_HOST=0.0.0.0:11434"
+```
+
 
 ```
 ollama run qwen2:0.5b
