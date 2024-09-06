@@ -43,4 +43,20 @@ python embedding_proxy.py --port 11435 --host http://localhost:11434
 
 ps:我这里是ubuntu，没有安装ollama，使用 sudo snap install ollama 来安装的
 
+# 启动 Indexing and Prompt Tuning UI
+
+```shell
+gradio index_app.py
+```
+如果需要使用IP访问，或者改端口，可以进行如下操作
+
+```
+vim index_app.py
+```
+将最后一行修改demo.launch(server_name='0.0.0.0',server_port=7862)
+
+# 访问 UI
+打开 Web 浏览器并输入 http://yourip:7862
+
+
 
