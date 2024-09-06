@@ -65,7 +65,16 @@ vim index_app.py
 我这里测试，在终端使用下面命令安装了个小模型
 
 ```
-ollama run qwen2:1.5b
-或者
 ollama run qwen2:0.5b
+或者
+ollama run qwen2:1.5b
 ```
+之后就可以看到多一个LLM
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409062139624.png)
+
+再下载个向量模型
+
+```
+ollama pull bge-large:335m
+```
+
