@@ -11,3 +11,6 @@ conda activate localai
 pip install  open-webui
 ```
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409061048074.png)
+
+
+ollama 停止 某个模型  curl localhost:11434/api/generate -d '{"model":"model-name","keep_alive":0}'
