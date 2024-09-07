@@ -1,5 +1,5 @@
 下载模型之前可以修改下模型默认保存路径。
-## Linux设置ollama保存模型的路径
+## 设置ollama保存模型的路径
 ```bash
 sudo mkdir /path/to/ollama/models
 sudo chown -R ollama:ollama /path/to/ollama/models
