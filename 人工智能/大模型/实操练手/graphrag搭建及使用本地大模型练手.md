@@ -193,3 +193,6 @@ COMMUNITY_REPORT_TABLE = "create_final_communities"
 cd utils
 python main.py
 ```
+
+
+这里运行有问题，后续有时间再看看 2024-9-7 14:15:34
