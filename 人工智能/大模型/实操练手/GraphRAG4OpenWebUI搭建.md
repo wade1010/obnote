@@ -50,7 +50,11 @@ claim_extraction:
 
 vim ./ragtest/.env
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072011805.png)
-python -m graphrag.index --root ./ragtest   运行后，显卡情况如下
+
+```
+python -m graphrag.index --root ./ragtest
+```
+   运行后，显卡情况如下
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072012163.png)
 
 
@@ -59,6 +63,7 @@ python -m graphrag.index --root ./ragtest   运行后，显卡情况如下
 ```bash
 python -m graphrag.prompt_tune --root ./ragtest --config ./ragtest/settings.yaml --no-entity-types --language Chinese --output ./ragtest/prompts
 ```
+运行截图如下：
 
 
 构建索引
