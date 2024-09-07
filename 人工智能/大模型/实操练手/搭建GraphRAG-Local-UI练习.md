@@ -56,15 +56,15 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 # 启动 Indexing and Prompt Tuning UI
 
-```shell
-gradio index_app.py
-```
-如果需要使用IP访问，或者改端口，可以进行如下操作
-
 ```
 vim index_app.py
 ```
 将最后一行修改demo.launch(server_name='0.0.0.0',server_port=7862)
+
+```shell
+python index_app.py
+```
+如果需要使用IP访问，或者改端口，可以进行如下操作
 
 # 访问 UI
 打开 Web 浏览器并输入 http://yourip:7862
