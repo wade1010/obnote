@@ -179,3 +179,6 @@ EMBEDDINGS_API_KEY=12345
 打开UI界面，点击 "Run Indexing"按钮，大概10分钟左右执行完成。点击“Check Indexing Status”按钮，结果如下图
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071638705.png)
 ## 优化提示词
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071646252.png)
+
+末尾出现 INFO: Generated community summarization prompt, stored in folder /tmp/tmpyh880egi 就代表完成了。
