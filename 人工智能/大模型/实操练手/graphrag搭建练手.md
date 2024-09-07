@@ -69,3 +69,4 @@ python -m graphrag.query \
 
 发现local的比global要准确很多
 
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071908744.png)
