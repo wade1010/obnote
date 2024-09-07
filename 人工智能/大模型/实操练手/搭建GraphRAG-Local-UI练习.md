@@ -58,10 +58,41 @@ rm -rf indexing/output indexing/prompts indexing/.DS_Store  # 即只保留.env s
 python -m graphrag.index --init --root ./indexing
 ```
 
-
-
 # 启动 API 服务器
+修改.env
 
+```
+vim ./indexing/.env
+```
+修改后，内容如下
+
+```
+LLM_PROVIDER=openai
+LLM_API_BASE=http://localhost:11434/v1
+LLM_MODEL='qwen2:latest'
+LLM_API_KEY=ollama
+
+EMBEDDINGS_PROVIDER=openai
+EMBEDDINGS_API_BASE=http://localhost:11434
+EMBEDDINGS_MODEL='nomic-embed-text:latest'
+EMBEDDINGS_API_KEY=ollama
+
+
+GRAPHRAG_API_KEY=ollama
+ROOT_DIR=indexing
+INPUT_DIR=${ROOT_DIR}/output/${timestamp}/artifacts
+LLM_SERVICE_TYPE=openai_chat
+EMBEDDINGS_SERVICE_TYPE=openai_embedding
+
+API_URL=http://localhost:8012
+API_PORT=8012
+CONTEXT_WINDOW=4096
+SYSTEM_MESSAGE=You are a helpful AI assistant.
+TEMPERATURE=0.5
+MAX_TOKENS=1024
+```
+
+启动
 ```
 python api.py --host 0.0.0.0 --port 8012 --reload
 ```
@@ -71,7 +102,7 @@ ModuleNotFoundError: No module named 'past'
 解决方法（2024-9-6 20:46:46有这个问题，预计后面会解决的那么白，）
 
 ```
-pip install future
+pip install future  # 后来我给加入到了requirements.txt里面了
 ```
 
 成功启动，如下
@@ -124,7 +155,7 @@ ollama run qwen2:1.5b
 再下载个向量模型
 
 ```
-ollama pull bge-large:335m
+ollama pull nomic-embed-text:latest
 ```
 
 后面可以修改下indexing目录下面的.env文件的配置，后期刷新页面，显示的模型就是我们想要的，要不然刷新下，就会默认设置为.env里面的模型
