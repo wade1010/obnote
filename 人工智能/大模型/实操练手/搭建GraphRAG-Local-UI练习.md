@@ -41,7 +41,7 @@ pip install future
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409062058756.png)
 
 
-如果使用 Ollama 进行嵌入，请启动嵌入代理:
+（暂时不用）如果使用 Ollama 进行嵌入，请启动嵌入代理: 
 
 ```
 python embedding_proxy.py --port 11435 --host http://localhost:11434
