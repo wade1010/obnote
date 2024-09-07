@@ -69,8 +69,8 @@ python -m graphrag.index --root ./ragtest
 
 
 ```
-export TAVILY_API_KEY="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"
-export INPUT_DIR="/llm/xhcheng/workspace/GraphRAG4OpenWebUI/ragtest/output/20240907-224136/artifacts"
+export INPUT_DIR="/llm/xhcheng/workspace/GraphRAG4OpenWebUI/ragtest/output/20240907-225340/artifacts/"
+export TAVILY_API_KEY="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"  
 export GRAPHRAG_API_KEY="ollama"
 export GRAPHRAG_API_KEY_EMBEDDING="ollama"
 export GRAPHRAG_LLM_MODEL="qwen2:latest"
@@ -78,4 +78,13 @@ export API_BASE="http://localhost:11434/v1"
 export API_BASE_EMBEDDING="http://localhost:11434/v1"
 export GRAPHRAG_EMBEDDING_MODEL="nomic-embed-text:latest"
 ```
+上面的 INPUT_DIR可能会频繁修改
+
+启动
+```
+python main-cn.py
+```
+
+启动成功，如下图
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072259830.png)
 
