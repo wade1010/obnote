@@ -2,8 +2,7 @@
 ## Linux设置ollama保存模型的路径
 ```bash
 sudo mkdir /path/to/ollama/models
-sudo chown -R root:root /path/to/ollama/models
-sudo chmod -R 777 /path/to/ollama/models
+sudo chown -R ollama:ollama /path/to/ollama/models
 sudo vi /etc/systemd/system/ollama.service
 ```
 在[Service]下面添加相应的环境变量Environment，包括OLLAMA_HOST和OLLAMA_MODELS
@@ -38,4 +37,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart ollama
 ```
 
-上面修改来源参考来自 知乎 南门子 的内容
+上面修改来源参考来自 知乎 南门子 的内容，我针对内容修改了一部分，主要是权限部分，我是赋给了ollama用户权限
+
+
+PS:上面修改方式不支持用snap这种方式去安装的ollama。
