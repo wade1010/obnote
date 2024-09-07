@@ -177,4 +177,4 @@ EMBEDDINGS_API_KEY=12345
 # 正式开始使用
 
 打开UI界面，点击 "Run Indexing"按钮，大概10分钟左右执行完成。点击“Check Indexing Status”按钮，结果如下图
-![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071636521.png)
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071638705.png)
