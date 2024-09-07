@@ -4,3 +4,11 @@ cd GraphRAG4OpenWebUI
 conda create -n GraphRAG4OpenWebUI -y python=3.10
 conda activate GraphRAG4OpenWebUI
 
+### Open WebUI安装
+
+```python
+pip install open-webui
+
+open-webui serve
+```
+
