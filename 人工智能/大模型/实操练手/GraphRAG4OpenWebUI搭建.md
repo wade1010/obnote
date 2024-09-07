@@ -12,9 +12,11 @@ pip install open-webui
 open-webui serve
 ```
 
-Tavily AI API申请 https://app.tavily.com/home
+# Tavily AI API申请 
 
+https://app.tavily.com/home
 
+# 
 mkdir ragtest
 mkdir -p ragtest/input
 然后传入一个1.txt（自己找一个txt）的文本到ragtest/input目录下
