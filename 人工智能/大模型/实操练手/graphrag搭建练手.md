@@ -62,3 +62,10 @@ python -m graphrag.query \
 --method local \
 "Who is Scrooge, and what are his main relationships?"
 ```
+
+
+后来改成了一个西游记中的一个章节的内容
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071906663.png)
+
+发现local的比global要准确很多
+
