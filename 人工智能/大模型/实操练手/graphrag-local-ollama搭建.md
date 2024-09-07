@@ -50,3 +50,6 @@ vim ./ragtest/.env
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072011805.png)
 python -m graphrag.index --root ./ragtest   运行后，显卡情况如下
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072012163.png)
+
+执行成功
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072015473.png)
