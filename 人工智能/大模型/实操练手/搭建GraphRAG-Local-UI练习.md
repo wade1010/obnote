@@ -18,7 +18,7 @@ pip install -e ./graphrag
 ```
 ## 安装其余的依赖
 
-vim requirements.txt  这里源码里面是没有指定版本的，我试过，但是没运行成功，由于也
+vim requirements.txt  这里源码里面是没有指定版本的，我试过，但是没运行成功，由于成功之前也做了重新构建indexing目录，不确定是不是都需要改（有兴趣的测试可以确定下）
 
 ```
 gradio==3.36.1
@@ -38,9 +38,18 @@ plotly==5.22.0
 future==1.0.0
 
 ```
-
+然后安装
 ```
 pip install -r requirements.txt
+```
+
+# 构建索引
+源码里面是有indexing目录的，我这里重新生成一遍（反正这么折腾后，是跑起来了）
+进入项目根目录
+
+```
+cp indexing/.env .env-example
+rm -rf 
 ```
 
 
@@ -74,8 +83,6 @@ ps:我这里是ubuntu，没有安装ollama，使用 下面命令 来安装的
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-# 构建索引
-源码里面是有
 
 # 启动 Indexing and Prompt Tuning UI
 
