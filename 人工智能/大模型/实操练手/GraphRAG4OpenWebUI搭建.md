@@ -17,7 +17,7 @@ Tavily AI API申请 https://app.tavily.com/home
 
 ```python
 export TAVILY_API_KEY="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"
-export INPUT_DIR="/llm/xhcheng/workspace/GraphRAG4OpenWebUI/data"
+export INPUT_DIR="/llm/xhcheng/workspace/GraphRAG4OpenWebUI/ragtest/input"
 # 设置llm API密钥
 export GRAPHRAG_API_KEY="ollama"
 # 设置嵌入API密钥（如果与GRAPHRAG_API_KEY不同）
