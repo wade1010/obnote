@@ -62,6 +62,11 @@ python -m graphrag.prompt_tune --root ./ragtest/ --config ragtest/settings.yaml 
 ```
 python -m graphrag.index --root ./ragtest
 ```
+执行过程中截图如下
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072254006.png)
+成功截图如下
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072255324.png)
+
 
 ```
 export TAVILY_API_KEY="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"
