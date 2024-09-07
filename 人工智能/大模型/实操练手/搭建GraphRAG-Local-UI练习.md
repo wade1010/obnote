@@ -84,6 +84,11 @@ ollama run qwen2:1.5b
 ollama pull bge-large:335m
 ```
 
-都下载后，然后测试几次，发现有问题。最后看作者在readme里面写着只在MAC环境下测试通过（2024-9-7 08:17:19）
+# 正式开始使用
+进入项目根目录
 
-后面我还是直接用官方的测试下吧。
+```
+c
+python -m graphrag.index --init --root ./indexing
+
+```
