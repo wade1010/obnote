@@ -69,7 +69,18 @@ python -m graphrag.index --init --root .
 设置.env和settings.yaml,使用本地大模型(Ollama方案)
 我这里已经安装过ollama，并且也使用ollama下载了一些模型
 
-将other/temp下的.env和settings.yaml文件内容拷贝后,需要对.env文件做如下调整：  
-GRAPHRAG_CHAT_MODEL=qwen2:latest  
+```
+ollama pull nomic-embed-text
+ollama run qwen2:7b
+```
+
+将other/temp下的.env和settings.yaml文件复制到ollama_text目录下
+
+```
+cp other/temp/.env other/temp/settings.yaml ollama_test/
+```
+
+需要对.env文件做如下调整：  
+GRAPHRAG_CHAT_MODEL=qwen2:7b
 GRAPHRAG_EMBEDDING_MODEL=nomic-embed-text:latest
 
