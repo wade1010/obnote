@@ -124,4 +124,16 @@ python -m graphrag.prompt_tune --config ./settings.yaml --root ./ --no-entity-ty
 
 执行上面命令之后，显卡情况大概如下
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071135046.png)
-不到2分钟
+不到2分钟大概完成
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071136790.png)
+
+# 构建索引
+
+```shell
+python -m graphrag.index --root ./                    
+```
+这个操作耗时，慢慢等待吧。2024-9-7 11:37开始的，
+执行情况如下图
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071138457.png)
+显卡情况如下图
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071138490.png)
