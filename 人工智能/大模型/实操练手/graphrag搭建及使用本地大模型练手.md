@@ -41,3 +41,35 @@ pip install -r requirements.txt
 ```
 
 # 创建graphrag所需文件夹
+进入到项目根目录
+
+```shell
+mkdir ollama_test  
+cd ollama_test  
+mkdir input  
+mkdir inputs  
+mkdir cache
+```
+# 准备测试文档
+这里以西游记白话文前九回内容为例，将other/text/下的1-9.txt文件直接放入ollama_test/input文件夹下
+
+返回项目根目录
+```shell
+cp other/text/* ollama_test/input/
+```
+# 初始化graphrag
+
+```shell
+cd ollama_test
+python -m graphrag.index --init --root .
+```
+初始化完成后，多出如下几个目录
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409070914005.png)
+# 设置参数
+设置.env和settings.yaml,使用本地大模型(Ollama方案)
+我这里已经安装过ollama，并且也使用ollama下载了一些模型
+
+将other/temp下的.env和settings.yaml文件内容拷贝后,需要对.env文件做如下调整：  
+GRAPHRAG_CHAT_MODEL=qwen2:latest  
+GRAPHRAG_EMBEDDING_MODEL=nomic-embed-text:latest
+
