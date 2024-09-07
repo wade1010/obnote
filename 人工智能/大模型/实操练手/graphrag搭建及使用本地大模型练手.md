@@ -173,4 +173,23 @@ INPUT_DIR = "/Users/janetjiang/Desktop/agi_code/GraphragTest/ragtest/inputs/arti
 ```
 INPUT_DIR = "自己的路径/inputs/artifacts"
 ```
+将
 
+```
+COMMUNITY_REPORT_TABLE = "create_final_community_reports"
+```
+
+改为
+
+```
+COMMUNITY_REPORT_TABLE = "create_final_communities.parquet"
+```
+
+
+
+运行
+
+```
+cd utils
+python main.py
+```
