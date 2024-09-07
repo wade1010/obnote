@@ -24,6 +24,16 @@ mkdir -p ragtest/input
 python -m graphrag.index --init --root ./ragtest
 ```
 
+
+vim ./ragtest/settings.yaml
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072011959.png)
+vim ./ragtest/.env
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072011805.png)
+python -m graphrag.index --root ./ragtest   运行后，显卡情况如下
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072012163.png)
+
+
+
 由于我找到的中文的，要执行下面命令
 ```bash
 python -m graphrag.prompt_tune --root ./ragtest/ --config ragtest/settings.yaml --no-entity-types
