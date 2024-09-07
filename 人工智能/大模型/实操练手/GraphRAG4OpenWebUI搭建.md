@@ -16,9 +16,18 @@ Tavily AI API申请 https://app.tavily.com/home
 
 
 ```python
-export GRAPHRAG_API_KEY="ollama"
 export TAVILY_API_KEY="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"
-export GRAPHRAG_LLM_MODEL="qwen2:latest"
-export GRAPHRAG_EMBEDDING_MODEL="nomic-embed-text:latest"
 export INPUT_DIR="/llm/xhcheng/workspace/GraphRAG4OpenWebUI/data"
+# 设置llm API密钥
+export GRAPHRAG_API_KEY="ollama"
+# 设置嵌入API密钥（如果与GRAPHRAG_API_KEY不同）
+export GRAPHRAG_API_KEY_EMBEDDING="ollama"
+# 设置LLM模型（默认为"gemma2"）
+export GRAPHRAG_LLM_MODEL="qwen2:latest"
+# 设置API基础URL（默认为本地服务器）
+export API_BASE="http://localhost:11434/v1"
+# 设置嵌入API基础URL（默认为OpenAI的API）
+export API_BASE_EMBEDDING="http://localhost:11434/v1"
+# 设置嵌入模型（默认为"text-embedding-3-small"）
+export GRAPHRAG_EMBEDDING_MODEL="nomic-embed-text:latest"
 ```
