@@ -1,13 +1,13 @@
 # 拉取代码
 
 ```shell
-git clone --depth=1 https://github.com/severian42/GraphRAG-Local-UI.git
+git clone --depth=1 https://github.com/severian42/GraphRAG-Local-UI.git   2024-9-7的最新代码
 cd GraphRAG-Local-UI
 ```
 # 安装所需的软件包
 
 ```
-conda create -n graphrag-local -y python=3.10  #这里目前（2024-9-7）需要指定3.10  不能用更高
+conda create -n graphrag-local -y python=3.10
 conda activate graphrag-local
 ```
 
@@ -17,6 +17,27 @@ conda activate graphrag-local
 pip install -e ./graphrag
 ```
 ## 安装其余的依赖
+
+vim requirements.txt  这里源码里面是没有指定版本的，我试过，但是没运行成功，由于也
+
+```
+gradio==3.36.1
+fastapi==0.111.1
+uvicorn==0.30.1
+python-dotenv==1.0.1
+pydantic==2.8.2
+pandas==2.2.2
+tiktoken==0.7.0
+langchain-community==0.2.16
+aiohttp==3.9.5
+pyyaml==6.0.1
+requests==2.32.3
+duckduckgo-search==6.2.11
+ollama==0.2.1
+plotly==5.22.0
+future==1.0.0
+
+```
 
 ```
 pip install -r requirements.txt
@@ -53,6 +74,8 @@ ps:我这里是ubuntu，没有安装ollama，使用 下面命令 来安装的
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
+# 构建索引
+源码里面是有
 
 # 启动 Indexing and Prompt Tuning UI
 
