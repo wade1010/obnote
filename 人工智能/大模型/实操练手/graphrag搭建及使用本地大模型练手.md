@@ -158,9 +158,19 @@ journalctl -ex
 cp -r ../other/utils .
 ```
 ## 运行main.py脚本
-先修改main.py
+先修改main.py里面的INPUT_DIR
 
 ```
 vim utils/main.py
+```
+将
+
+```
+INPUT_DIR = "/Users/janetjiang/Desktop/agi_code/GraphragTest/ragtest/inputs/artifacts"
+```
+修改为
+
+```
+INPUT_DIR = "自己的路径/inputs/artifacts"
 ```
 
