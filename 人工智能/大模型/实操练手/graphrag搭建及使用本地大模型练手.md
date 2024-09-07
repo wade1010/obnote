@@ -85,7 +85,7 @@ GRAPHRAG_CHAT_MODEL=qwen2:7b
 GRAPHRAG_EMBEDDING_MODEL=nomic-embed-text:latest
 
 修改后.env文件如下
-![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409070933983.png)
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071258327.png)
 
 PS：这里我还下载了一个llama3.1 8B，用来做模型对比的，不做对比，可以不需要
 
@@ -126,6 +126,7 @@ python -m graphrag.prompt_tune --config ./settings.yaml --root ./ --no-entity-ty
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071135046.png)
 不到2分钟大概完成
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071136790.png)
+
 
 # 构建索引
 
