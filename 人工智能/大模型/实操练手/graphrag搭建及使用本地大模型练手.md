@@ -138,4 +138,7 @@ python -m graphrag.index --root ./
 显卡情况如下图
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071138490.png)
 成功执行，截图如下
-![Uploading file...ovfj0]()
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071237142.png)
+
+
+
