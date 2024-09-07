@@ -90,6 +90,22 @@ ollama run qwen2:1.5b
 ollama pull bge-large:335m
 ```
 
+后面可以修改下indexing目录下面的.env文件的配置，后期刷新页面，显示的模型就是我们想要的，要不然刷新下，就会默认设置为.env里面的模型
+
+```
+LLM_PROVIDER=openai
+LLM_API_BASE=http://localhost:11434/v1
+LLM_MODEL=qwen2:latest
+LLM_API_KEY=12345
+
+EMBEDDINGS_PROVIDER=openai
+EMBEDDINGS_API_BASE=http://localhost:11434
+EMBEDDINGS_MODEL=nomic-embed-text:latest
+EMBEDDINGS_API_KEY=12345
+
+```
+
+
 # 正式开始使用
 进入项目根目录
 
