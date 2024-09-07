@@ -51,14 +51,16 @@ mkdir input inputs cache
 # 准备测试文档
 这里以西游记白话文前九回内容为例，将other/text/下的1-9.txt文件直接放入ollama_test/input文件夹下
 
-返回项目根目录
+
 ```shell
-cp other/text/* ollama_test/input/
+cp ../other/text/* input/
 ```
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071255643.png)
+
 # 初始化graphrag
 
 ```shell
-cd ollama_test
+在ollama_text目录下执行 如果不再，则cd ollama_test进行
 python -m graphrag.index --init --root .
 ```
 初始化完成后，多出如下几个目录
@@ -75,7 +77,7 @@ ollama run qwen2:7b
 将other/temp下的.env和settings.yaml文件复制到ollama_text目录下
 
 ```
-cp other/temp/.env other/temp/settings.yaml ollama_test/
+cp ../other/temp/.env ../other/temp/settings.yaml .
 ```
 
 需要对.env文件做如下调整：  
