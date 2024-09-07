@@ -133,7 +133,7 @@ python -m graphrag.prompt_tune --config ./settings.yaml --root ./ --no-entity-ty
 ```shell
 python -m graphrag.index --root ./                    
 ```
-这个操作耗时，慢慢等待吧。2024-9-7 11:37开始的，
+这个操作耗时，慢慢等待吧。2024-9-7 13:00开始的，
 执行情况如下图
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071138457.png)
 显卡情况如下图
