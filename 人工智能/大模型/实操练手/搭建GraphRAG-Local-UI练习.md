@@ -7,7 +7,7 @@ cd GraphRAG-Local-UI
 # 安装所需的软件包
 
 ```
-conda create -n graphrag-local -y python=3.11  #这里目前需要指定3.11  不能用3.12
+conda create -n graphrag-local -y python=3.11  #这里目前（2024-9-7）需要指定3.11  不能用3.12
 conda activate graphrag-local
 ```
 
