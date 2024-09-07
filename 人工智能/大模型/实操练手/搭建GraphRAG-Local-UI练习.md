@@ -189,3 +189,4 @@ vim app.py
 
 将最后一行修改demo.launch(server_name='0.0.0.0',server_port=7863, share=True)
 
+发现也不行。。。
