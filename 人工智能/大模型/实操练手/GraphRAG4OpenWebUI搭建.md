@@ -26,7 +26,8 @@ python -m graphrag.index --init --root ./ragtest
 
 
 vim ./ragtest/settings.yaml
-![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072011959.png)
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072243191.png)
+
 vim ./ragtest/.env
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072011805.png)
 python -m graphrag.index --root ./ragtest   运行后，显卡情况如下
@@ -38,7 +39,6 @@ python -m graphrag.index --root ./ragtest   运行后，显卡情况如下
 ```bash
 python -m graphrag.prompt_tune --root ./ragtest/ --config ragtest/settings.yaml --no-entity-types
 ```
-
 
 
 构建索引
