@@ -48,4 +48,11 @@ python -m graphrag.index --root ./ragtest
 
 ```python
 export TAVILY_API_KEY="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"
+export INPUT_DIR="/llm/xhcheng/workspace/GraphRAG4OpenWebUI/ragtest/input"
+export GRAPHRAG_API_KEY="ollama"
+export GRAPHRAG_API_KEY_EMBEDDING="ollama"
+export GRAPHRAG_LLM_MODEL="qwen2:latest"
+export API_BASE="http://localhost:11434/v1"
+export API_BASE_EMBEDDING="http://localhost:11434/v1"
+export GRAPHRAG_EMBEDDING_MODEL="nomic-embed-text:latest"
 ```
