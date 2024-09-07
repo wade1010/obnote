@@ -5,6 +5,12 @@ git clone --depth=1 https://github.com/severian42/GraphRAG-Local-UI.git
 cd GraphRAG-Local-UI
 ```
 # 安装所需的软件包
+
+```
+conda create -n graphrag-local -y python=3.11  #这里目前需要指定3.11  不能用3.12
+conda activate graphrag-local
+```
+
 ## 安装graphrag
 
 ```shell
@@ -28,7 +34,7 @@ ModuleNotFoundError: No module named 'past'
 解决方法（2024-9-6 20:46:46有这个问题，预计后面会解决的那么白，）
 
 ```
- pip install feature
+pip install feature
 ```
 
 成功启动，如下
