@@ -184,3 +184,8 @@ EMBEDDINGS_API_KEY=12345
 末尾出现 INFO: Generated community summarization prompt, stored in folder /tmp/tmpyh880egi 就代表完成了。
 
 发现都成功了，但是没有github上面那个主页面的显示图，再折腾下作者声明lagcy的app.py
+
+vim app.py
+
+将最后一行修改demo.launch(server_name='0.0.0.0',server_port=7863, share=True)
+
