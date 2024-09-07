@@ -12,3 +12,6 @@ pip install open-webui
 open-webui serve
 ```
 
+Tavily AI API申请 https://app.tavily.com/home
+
+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
