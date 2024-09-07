@@ -182,7 +182,7 @@ COMMUNITY_REPORT_TABLE = "create_final_community_reports"
 改为
 
 ```
-COMMUNITY_REPORT_TABLE = "create_final_communities.parquet"
+COMMUNITY_REPORT_TABLE = "create_final_communities"
 ```
 
 
