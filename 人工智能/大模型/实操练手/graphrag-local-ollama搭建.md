@@ -63,3 +63,23 @@ python -m graphrag.query --root ./ragtest --method global "What is machine learn
 
 
 
+**Graphs can be saved which further can be used for visualization by changing the graphml to "true" in the settings.yaml :**
+
+```
+snapshots:
+graphml: yes  #这个默认已经是yes了
+```
+
+**To visualize the generated graphml files, you can use : [https://gephi.org/users/download/](https://gephi.org/users/download/) or the script provided in the repo visualize-graphml.py :**
+
+Pass the path to the .graphml file to the below line in visualize-graphml.py:
+
+```
+graph = nx.read_graphml('output/20240708-161630/artifacts/summarized_graph.graphml') 
+```
+
+13. **Visualize .graphml :**
+    
+    ```shell
+    python visualize-graphml.py
+    ```
