@@ -64,6 +64,7 @@ python -m graphrag.index --root ./ragtest
 python -m graphrag.prompt_tune --root ./ragtest --config ./ragtest/settings.yaml --no-entity-types --language Chinese --output ./ragtest/prompts
 ```
 运行截图如下：
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409080735491.png)
 
 
 构建索引
