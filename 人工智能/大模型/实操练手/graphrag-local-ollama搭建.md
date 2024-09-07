@@ -60,3 +60,6 @@ python -m graphrag.index --root ./ragtest   运行后，显卡情况如下
 python -m graphrag.query --root ./ragtest --method global "What is machine learning?"
 ```
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072020011.png)
+
+
+
