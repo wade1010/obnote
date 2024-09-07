@@ -88,7 +88,6 @@ ollama pull bge-large:335m
 进入项目根目录
 
 ```
-c
 python -m graphrag.index --init --root ./indexing
 
 ```
