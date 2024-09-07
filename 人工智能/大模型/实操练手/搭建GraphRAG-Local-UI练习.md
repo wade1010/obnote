@@ -41,7 +41,12 @@ ModuleNotFoundError: No module named 'past'
 python embedding_proxy.py --port 11435 --host http://localhost:11434
 ```
 
-ps:我这里是ubuntu，没有安装ollama，使用 sudo snap install ollama 来安装的
+ps:我这里是ubuntu，没有安装ollama，使用 下面命令 来安装的
+
+```shell
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
 
 # 启动 Indexing and Prompt Tuning UI
 
