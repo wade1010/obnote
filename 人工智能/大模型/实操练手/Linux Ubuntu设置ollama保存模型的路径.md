@@ -41,4 +41,4 @@ sudo systemctl restart ollama
 
 
 PS:上面修改方式不支持用snap这种方式去安装的ollama。
-之前折腾环境的时候，不小心删除了/usr/share/ollama这个目录，这个也是需要的
+之前折腾环境的时候，不小心删除了/usr/share/ollama这个目录，这个也是需要的，而且如果手动创建后最好给个权限，sudo chown -R 777 /usr/share/ollama
