@@ -133,17 +133,23 @@ python -m graphrag.prompt_tune --config ./settings.yaml --root ./ --no-entity-ty
 ```shell
 python -m graphrag.index --root ./                    
 ```
-这个操作耗时，慢慢等待吧。2024-9-7 13:00开始的，
+这个操作耗时，慢慢等待吧。2024-9-7 13:00开始的，2024-9-7 13:13结束
 执行情况如下图
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071138457.png)
 显卡情况如下图
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071138490.png)
 成功执行，截图如下
-![Uploading file...fi992]()
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071314973.png)
+
 
 
 执行期间可以通过 journalctl -ex 查看下日志，如下
+
+```shell
+journalctl -ex
+```
+可以看出，频繁的请求/v1/embeddings 接口
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071311930.png)
 
-
+# 
 
