@@ -151,5 +151,16 @@ journalctl -ex
 可以看出，频繁的请求/v1/embeddings 接口
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071311930.png)
 
-# 
+# 测试graphrag
+测试代码在utils文件夹，将other/utils文件夹直接拷贝到ollama_test文件夹下
+
+```
+cp -r ../other/utils .
+```
+## 运行main.py脚本
+先修改main.py
+
+```
+vim utils/main.py
+```
 
