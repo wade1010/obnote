@@ -126,7 +126,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ```
 vim index_app.py
 ```
-将最后一行修改demo.launch(server_name='0.0.0.0',server_port=7862)
+将最后一行修改demo.launch(server_name='0.0.0.0',server_port=7862, share=True)
 
 ```shell
 python index_app.py
@@ -182,3 +182,5 @@ EMBEDDINGS_API_KEY=12345
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071646252.png)
 
 末尾出现 INFO: Generated community summarization prompt, stored in folder /tmp/tmpyh880egi 就代表完成了。
+
+发现都成功了，但是没有github上面那个主页面的显示图，再折腾下作者声明lagcy的app.py
