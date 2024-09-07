@@ -99,3 +99,4 @@ python main-cn.py
 上面的左边红色框，好像不能填127.0.0.1和localhost，报网络错误，不知道是open-webui还是GraphRAG4OpenWebUI的问题，不去细究。填自己IP就行，记得端口号防火墙开放。
 
 可以关掉ollama。
+## 测试
