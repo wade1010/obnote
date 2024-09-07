@@ -120,3 +120,8 @@ python -m graphrag.prompt_tune --config ./settings.yaml --root ./ --no-entity-ty
 --chunk-size :(可选)从输入文档生成文本单元时使用的标记大小。默认值为 20
 --no-entity-types（无实体类型） :(可选)使用无类型实体提取生成。建议在数据涵盖大量主题或高度随机化时使用
 --output :(可选)保存生成的提示信息的文件夹。默认为 “prompts”
+
+
+执行上面命令之后，显卡情况大概如下
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071135046.png)
+不到2分钟
