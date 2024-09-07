@@ -28,6 +28,23 @@ python -m graphrag.index --init --root ./ragtest
 vim ./ragtest/settings.yaml
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072243191.png)
 
+开启covariates(协变量)
+```shell
+claim_extraction:
+  ## llm: override the global llm settings for this task
+  ## parallelization: override the global parallelization settings for this task
+  ## async_mode: override the global async_mode settings for this task
+  enabled: true
+  prompt: "prompts/claim_extraction.txt"
+  description: "Any claims or facts that could be relevant to information discovery."
+  max_gleanings: 1
+
+##Just uncomment the enabled line in your settings.yaml file.
+##I'll resolve the issue, but please reopen if this doesn't work
+```
+去掉注释，如下图
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072252427.png)
+
 vim ./ragtest/.env
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072011805.png)
 python -m graphrag.index --root ./ragtest   运行后，显卡情况如下
