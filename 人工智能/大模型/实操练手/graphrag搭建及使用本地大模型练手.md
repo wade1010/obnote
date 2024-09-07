@@ -139,7 +139,11 @@ python -m graphrag.index --root ./
 显卡情况如下图
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071138490.png)
 成功执行，截图如下
-![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071237142.png)
+![Uploading file...fi992]()
+
+
+执行期间可以通过 journalctl -ex 查看下日志，如下
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071311930.png)
 
 
 
