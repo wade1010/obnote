@@ -39,6 +39,8 @@ python -m graphrag.index --root ./ragtest   运行后，显卡情况如下
 python -m graphrag.prompt_tune --root ./ragtest/ --config ragtest/settings.yaml --no-entity-types
 ```
 
+
+
 构建索引
 ```
 python -m graphrag.index --root ./ragtest
@@ -46,17 +48,4 @@ python -m graphrag.index --root ./ragtest
 
 ```python
 export TAVILY_API_KEY="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"
-export INPUT_DIR="/llm/xhcheng/workspace/GraphRAG4OpenWebUI/ragtest/input"
-# 设置llm API密钥
-export GRAPHRAG_API_KEY="ollama"
-# 设置嵌入API密钥（如果与GRAPHRAG_API_KEY不同）
-export GRAPHRAG_API_KEY_EMBEDDING="ollama"
-# 设置LLM模型（默认为"gemma2"）
-export GRAPHRAG_LLM_MODEL="qwen2:latest"
-# 设置API基础URL（默认为本地服务器）
-export API_BASE="http://localhost:11434/v1"
-# 设置嵌入API基础URL（默认为OpenAI的API）
-export API_BASE_EMBEDDING="http://localhost:11434/v1"
-# 设置嵌入模型（默认为"text-embedding-3-small"）
-export GRAPHRAG_EMBEDDING_MODEL="nomic-embed-text:latest"
 ```
