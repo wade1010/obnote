@@ -100,3 +100,4 @@ python main-cn.py
 
 可以关掉ollama。
 ## 测试
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072340783.png)
