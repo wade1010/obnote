@@ -43,7 +43,7 @@ future==1.0.0
 pip install -r requirements.txt
 ```
 
-# 构建索引
+# 初始化索引文件夹
 源码里面是有indexing目录的，我这里重新生成一遍（反正这么折腾后，是跑起来了）
 进入项目根目录
 
@@ -52,7 +52,6 @@ cp indexing/.env .env-example  # 仅留备份作用
 rm -rf indexing/output indexing/prompts indexing/.DS_Store  # 即只保留.env settings.yaml input 
 ```
 初始化索引文件夹
-
 
 ```
 python -m graphrag.index --init --root ./indexing
@@ -176,5 +175,7 @@ EMBEDDINGS_API_KEY=12345
 
 # 正式开始使用
 
+## 构建索引
 打开UI界面，点击 "Run Indexing"按钮，大概10分钟左右执行完成。点击“Check Indexing Status”按钮，结果如下图
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071638705.png)
+## 优化提示词
