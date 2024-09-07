@@ -48,9 +48,16 @@ pip install -r requirements.txt
 进入项目根目录
 
 ```
-cp indexing/.env .env-example
-rm -rf 
+cp indexing/.env .env-example  # 仅留备份作用
+rm -rf indexing/output indexing/prompts indexing/.DS_Store  # 即只保留.env settings.yaml input 
 ```
+初始化索引文件夹
+
+
+```
+python -m graphrag.index --init --root ./indexing
+```
+
 
 
 # 启动 API 服务器
