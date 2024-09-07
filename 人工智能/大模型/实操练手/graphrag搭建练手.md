@@ -28,8 +28,7 @@ vim ragetest/settings.yaml
 
 
 ```
-python -m graphrag.prompt_tune --root ragtest  --no-entity-types
-python -m graphrag.prompt_tune --config ./settings.yaml --root ./ --no-entity-types --language Chinese --output ./prompts
+python -m graphrag.prompt_tune --config ./ragtest/settings.yaml --root ./ragtest --no-entity-types --language Chinese --output ./ragtest/prompts
 ```
 
 Running the Indexing pipeline

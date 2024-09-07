@@ -57,7 +57,7 @@ python -m graphrag.index --root ./ragtest   运行后，显卡情况如下
 
 由于我找到的中文的，要执行下面命令
 ```bash
-python -m graphrag.prompt_tune --root ./ragtest/ --config ragtest/settings.yaml --no-entity-types
+python -m graphrag.prompt_tune --root ./ragtest --config ./ragtest/settings.yaml --no-entity-types --language Chinese --output ./ragtest/prompts
 ```
 
 
