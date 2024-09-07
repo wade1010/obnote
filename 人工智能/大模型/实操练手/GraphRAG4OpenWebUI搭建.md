@@ -15,6 +15,17 @@ open-webui serve
 Tavily AI API申请 https://app.tavily.com/home
 
 
+mkdir ragtest
+mkdir -p ragtest/input
+然后传入一个1.txt（自己找一个txt）的文本到ragtest/input目录下
+
+
+```
+python -m graphrag.index --init --root ./ragtest
+python -m graphrag.index --root ./ragtest
+```
+
+
 ```python
 export TAVILY_API_KEY="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"
 export INPUT_DIR="/llm/xhcheng/workspace/GraphRAG4OpenWebUI/ragtest/input"
