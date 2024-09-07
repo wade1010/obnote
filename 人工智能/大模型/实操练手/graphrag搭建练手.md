@@ -22,4 +22,38 @@ vim ragtest/.env
 ```
 GRAPHRAG_API_KEY=sk-1UIybqycAYSTCUBf42C5757cBf94492a9c2534A8xxxxxxx
 ```
+vim ragetest/settings.yaml
+修改为下图
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071846323.png)
 
+Running the Indexing pipeline
+```sh
+python -m graphrag.index --root ./ragtest
+```
+
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071848902.png)
+
+
+# Using the Query Engine
+
+## Running the Query Engine
+
+Now let's ask some questions using this dataset.
+
+Here is an example using Global search to ask a high-level question:
+
+```sh
+python -m graphrag.query \
+--root ./ragtest \
+--method global \
+"What are the top themes in this story?"
+```
+
+Here is an example using Local search to ask a more specific question about a particular character:
+
+```sh
+python -m graphrag.query \
+--root ./ragtest \
+--method local \
+"Who is Scrooge, and what are his main relationships?"
+```
