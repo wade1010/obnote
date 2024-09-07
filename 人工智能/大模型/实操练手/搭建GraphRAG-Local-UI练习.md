@@ -34,7 +34,7 @@ ModuleNotFoundError: No module named 'past'
 解决方法（2024-9-6 20:46:46有这个问题，预计后面会解决的那么白，）
 
 ```
-pip install feature
+pip install future
 ```
 
 成功启动，如下
