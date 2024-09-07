@@ -14,12 +14,11 @@ open-webui serve
 
 Tavily AI API申请 https://app.tavily.com/home
 
-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
 
 ```python
-export GRAPHRAG_API_KEY="your_graphrag_api_key"
-export TAVILY_API_KEY="your_tavily_api_key"
-export GRAPHRAG_LLM_MODEL="gpt-3.5-turbo"
+export GRAPHRAG_API_KEY="ollama"
+export TAVILY_API_KEY="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"
+export GRAPHRAG_LLM_MODEL="qwen2:latest"
 export GRAPHRAG_EMBEDDING_MODEL="text-embedding-3-small"
 export INPUT_DIR="/path/to/your/input/directory"
 ```
