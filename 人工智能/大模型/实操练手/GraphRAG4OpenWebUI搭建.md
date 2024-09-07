@@ -16,7 +16,8 @@ open-webui serve
 
 https://app.tavily.com/home
 
-# 
+# 初始化graphrag
+
 mkdir ragtest
 mkdir -p ragtest/input
 然后传入一个1.txt（自己找一个txt）的文本到ragtest/input目录下
@@ -70,8 +71,9 @@ python -m graphrag.index --root ./ragtest
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072255324.png)
 
 
+# 启动GraphRAG4OpenWebUI
 ```
-export INPUT_DIR="/llm/xhcheng/workspace/GraphRAG4OpenWebUI/ragtest/output/20240907-225340/artifacts/"
+export INPUT_DIR="/xxxxxx/workspace/GraphRAG4OpenWebUI/ragtest/output/20240907-225340/artifacts/"
 export TAVILY_API_KEY="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"  
 export GRAPHRAG_API_KEY="ollama"
 export GRAPHRAG_API_KEY_EMBEDDING="ollama"
@@ -90,3 +92,8 @@ python main-cn.py
 启动成功，如下图
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072259830.png)
 
+# 配置open-webui
+
+浏览器访问 http://yourip:8080/admin/settings
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072310952.png)
+上面的左边红色框，好像不能填127.0.0.1和localhost，报网络错误，不知道是open-webui还是
