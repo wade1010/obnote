@@ -48,4 +48,5 @@ vim ./ragtest/settings.yaml
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072011959.png)
 vim ./ragtest/.env
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072011805.png)
-python -m graphrag.index --root ./ragtest
+python -m graphrag.index --root ./ragtest   运行后，显卡情况如下
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072012163.png)
