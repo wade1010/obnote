@@ -46,9 +46,7 @@ pip install -r requirements.txt
 ```shell
 mkdir ollama_test  
 cd ollama_test  
-mkdir input  
-mkdir inputs  
-mkdir cache
+mkdir input inputs cache
 ```
 # 准备测试文档
 这里以西游记白话文前九回内容为例，将other/text/下的1-9.txt文件直接放入ollama_test/input文件夹下
