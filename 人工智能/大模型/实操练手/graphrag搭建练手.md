@@ -26,6 +26,11 @@ vim ragetest/settings.yaml
 修改为下图
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071846323.png)
 
+
+```
+python -m graphrag.prompt_tune --root ragtest  --no-entity-types
+```
+
 Running the Indexing pipeline
 ```sh
 python -m graphrag.index --root ./ragtest
