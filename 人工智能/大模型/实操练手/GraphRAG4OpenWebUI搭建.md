@@ -103,3 +103,6 @@ python main-cn.py
 可以关掉ollama。
 ## 测试
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072340783.png)
+
+后来测试了一把使用非本地的大模型，上面的文本，4个文本，4章节西游记的txt，跑一次，就把我积分耗完了。。。乖乖用本地大模型吧。
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409080947087.png)
