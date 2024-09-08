@@ -4,8 +4,23 @@
 vim .bashrc
 
 加入下面代码
-```
-alias cl='conda env list'
+```shell
+function cl() {
+    conda env list | awk '
+    BEGIN {print "# conda environments:"}
+    NR==2 {print $0}
+    NR>2 && NF>0 {
+        env_name = $1
+        if ($(NF-1) == "*") {
+            env_name = env_name " *"
+            path = $NF
+        } else {
+            path = $NF
+        }
+        printf "%-3d %-25s %s\n", NR-2, env_name, path
+    }
+    '
+}
 function ca() {
     env_name=$(conda env list | awk 'NR>2 {print $1}' | sed -n "${1}p")
     if [ -n "$env_name" ]; then
