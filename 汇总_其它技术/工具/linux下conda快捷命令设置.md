@@ -22,11 +22,15 @@ function cl() {
     '
 }
 function ca() {
-    env_name=$(conda env list | awk 'NR>2 {print $1}' | sed -n "${1}p")
-    if [ -n "$env_name" ]; then
-        conda activate "$env_name"
+    if [[ "$1" =~ ^[0-9]+$ ]]; then
+        env_name=$(conda env list | awk 'NR>2 {print $1}' | sed -n "${1}p")
+        if [ -n "$env_name" ]; then
+            conda activate "$env_name"
+        else
+            echo "Environment number $1 does not exist."
+        fi
     else
-        echo "Environment number $1 does not exist."
+        conda activate "$1"
     fi
 }
 ```
