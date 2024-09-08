@@ -30,6 +30,8 @@ function ca() {
     fi
 }
 ```
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409081704488.png)
+
 source .bashrc
 
 
@@ -37,3 +39,4 @@ source .bashrc
 cl命令查看 conda 环境列表
 
 ca 1  、ca 2等切换环境
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409081703730.png)
