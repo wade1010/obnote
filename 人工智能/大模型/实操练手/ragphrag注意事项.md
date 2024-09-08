@@ -11,4 +11,5 @@ If you want this text to be encoded as a special token, pass it to `allowed_spec
 If you want this text to be encoded as normal text, disable the check for this token by passing `disallowed_special=(enc.special_tokens_set - {'<|endoftext|>'})`.
 To disable this check for all special tokens, pass `disallowed_special=()`.
 
-有时候重新
+有时候重新再执行一遍，可以解决。
+
