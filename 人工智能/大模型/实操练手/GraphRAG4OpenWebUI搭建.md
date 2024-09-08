@@ -51,15 +51,8 @@ claim_extraction:
 vim ./ragtest/.env
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072011805.png)
 
-```
-python -m graphrag.index --root ./ragtest
-```
-   运行后，显卡情况如下
-![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072012163.png)
 
-
-
-由于我找到的中文的，要执行下面命令
+prompt_tune 由于我找到的中文的，要执行下面命令
 ```bash
 python -m graphrag.prompt_tune --root ./ragtest --config ./ragtest/settings.yaml --no-entity-types --language Chinese --output ./ragtest/prompts
 ```
@@ -71,6 +64,9 @@ python -m graphrag.prompt_tune --root ./ragtest --config ./ragtest/settings.yaml
 ```
 python -m graphrag.index --root ./ragtest
 ```
+   运行后，显卡情况如下
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072012163.png)
+
 执行过程中截图如下
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409072254006.png)
 成功截图如下
