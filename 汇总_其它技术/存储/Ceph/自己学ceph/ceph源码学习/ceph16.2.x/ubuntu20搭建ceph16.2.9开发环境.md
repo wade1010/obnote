@@ -118,7 +118,8 @@ sudo ./npm install -g @angular/[cli@12.2.13](http://cli@12.2.13)      版本可�
 
 sudo rm -rf /usr/bin/node
 
-
+
+
 
 ```
 110  /home/runner/clion-2022.3.3/bin/cmake/linux/x64/bin/cmake --build /home/runner/workspace/ceph-16.2.9/cmake-build-debug --target all -- -j 3
