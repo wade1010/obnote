@@ -202,3 +202,8 @@ ERROR Error executing verb "cluster_graph" in create_base_entity_graph: EmptyNet
 KeyError: 'community'
 
 后来本地模型换成mistral:7b就可以了
+
+
+页面提问，页面报错，但是后台可以显示结果了。后续再折腾2024-9-8 18:41:13
+
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409081840650.png)
