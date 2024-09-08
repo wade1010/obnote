@@ -19,4 +19,6 @@ source .bashrc
 
 
 之后就可以快捷使用了
+cl命令查看 conda 环境列表
 
+ca 1  、ca 2等切换环境
