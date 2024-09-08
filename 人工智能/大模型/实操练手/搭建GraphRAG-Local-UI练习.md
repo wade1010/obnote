@@ -190,3 +190,15 @@ vim app.py
 将最后一行修改demo.launch(server_name='0.0.0.0',server_port=7863, share=True)
 
 发现也不行。。。
+
+
+2024-9-8 18:34:19后来又折腾了一遍
+
+发现一些问题，并解决后，可以运行了
+
+错误1
+ERROR Error executing verb "cluster_graph" in create_base_entity_graph: EmptyNetworkError
+错误2
+KeyError: 'community'
+
+后来本地模型换成mistral:7b就可以了
