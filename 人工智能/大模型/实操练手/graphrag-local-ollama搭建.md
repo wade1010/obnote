@@ -28,15 +28,15 @@ pip install future
     
 5. **Copy sample data folder input/ to ./ragtest. Input/ has the sample data to run the setup. You can add your own data here in .txt format.**
     
-    ```shell
-    cp input/* ./ragtest/input
-    ```
+```shell
+cp input/* ./ragtest/input
+```
     
 6. **Initialize the ./ragtest folder to create the required files:**
     
-    ```shell
-    python -m graphrag.index --init --root ./ragtest
-    ```
+```shell
+python -m graphrag.index --init --root ./ragtest
+```
     
 7. **Move the settings.yaml file, this is the main predefined config file configured with ollama local models :**
     
