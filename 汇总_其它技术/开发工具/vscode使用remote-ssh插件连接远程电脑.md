@@ -11,8 +11,8 @@
 上图说明，上图是无需秘钥的SSH链接方式
 
 ## 有ssh秘钥
-
-![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409091112664.png)
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409091156998.png)
+上面是需要秘钥的
 
 ```
 Host 主机名
