@@ -7,3 +7,9 @@ https://cloud.tencent.com/developer/article/1757852
 
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409111759763.png)
 
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409111801071.png)
+
+
+去 https://pypi.org/manage/projects/
+
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409111803526.png)
