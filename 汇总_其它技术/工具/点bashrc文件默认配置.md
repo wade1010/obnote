@@ -9,18 +9,6 @@ alias sl='screen -ls'
 alias sr='screen -r'
 alias sS='screen -S'
 alias shelp='echo "screen -S name、screen -r name、screen -ls、Ctrl-a 然后按d将分离当前screen会话，并返回到原始终端、Ctrl-a 然后按 \"、Ctrl-a 然后按 n、Ctrl-a 然后按 p"'
-function ca() {
-    if [[ "$1" =~ ^[0-9]+$ ]]; then
-        env_name=$(conda env list | awk 'NR>2 {print $1}' | sed -n "${1}p")
-        if [ -n "$env_name" ]; then
-            conda activate "$env_name"
-        else
-            echo "Environment number $1 does not exist."
-        fi
-    else
-        conda activate "$1"
-    fi
-}
 function cl() {
     conda env list | awk '
     BEGIN {print "# conda environments:"}
@@ -37,5 +25,16 @@ function cl() {
     }
     '
 }
-
+function ca() {
+    if [[ "$1" =~ ^[0-9]+$ ]]; then
+        env_name=$(conda env list | awk 'NR>2 {print $1}' | sed -n "${1}p")
+        if [ -n "$env_name" ]; then
+            conda activate "$env_name"
+        else
+            echo "Environment number $1 does not exist."
+        fi
+    else
+        conda activate "$1"
+    fi
+}
 ```
