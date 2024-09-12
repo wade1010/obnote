@@ -196,3 +196,5 @@ python main.py
 
 
 这里运行有问题，后续有时间再看看 2024-9-7 14:15:34
+
+后来用 https://github.com/wade1010/graphrag-ui 来 2024-9-12 16:44:36
