@@ -92,7 +92,8 @@ vim /etc/ceph/ceph.conf
 fsid = e8020c3a-1181-4ff9-8574-d3004cf518f7
 mon_initial_members = monitor
 mon_host = 192.168.1.200
-ms_type = async+msgr2
+ms_type = async+msgr2
+
 auth cluster required = cephx
 auth service required = cephx
 auth client required = cephx
