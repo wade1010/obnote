@@ -127,3 +127,6 @@ GraphRAG 需要使用txt文件进行解析。自己找一些，然后通过下�
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409132031709.png)
 
 2、进行可视化
+点击如下图的按钮
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409132032853.png)
+

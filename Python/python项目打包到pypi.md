@@ -4,7 +4,7 @@ https://juejin.cn/post/6844903906158313485
 
 https://cloud.tencent.com/developer/article/1757852
 
-根据上面第一个链接，写个项目，然后配置setup.py，然后打包
+根据上面第一个链接，写个项目，然后配置setup.py，然后打包 ,命令为  python setup.py bdist_wheel
 然后根据上面第二个或者第三个链接，将打包好的链接传到pypi
 
 第一次使用pypi上传功能，我开通的是 api token，这个还需要开启二次认证，我下载的是google authenticator,成功开通后，这个API很长，就显示一遍，保存好。
