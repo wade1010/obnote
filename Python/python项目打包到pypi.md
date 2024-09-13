@@ -35,3 +35,11 @@ twine upload dist/*
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409111803526.png)
 
 
+
+上传之后，pip install 的时候，如果是自己配置了国内源，一般同步没那么快，可以用下面命令，指定默认源进行下载
+
+```shell
+ pip install graphrag-ui -i https://pypi.org/simple
+```
+
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409131521307.png)
