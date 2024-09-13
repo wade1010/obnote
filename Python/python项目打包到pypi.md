@@ -4,7 +4,11 @@ https://juejin.cn/post/6844903906158313485
 
 https://cloud.tencent.com/developer/article/1757852
 
-根据上面
+根据上面第一个链接，写个项目，然后配置setup.py，然后打包
+然后根据上面第二个或者第三个链接，将打包好的链接传到pypi
+
+第一次使用pypi上传功能，我开通的是 api 
+
 
 
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409111759763.png)
