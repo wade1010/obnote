@@ -67,7 +67,3 @@ Embeddings API Base URL同理。
 
 # 使用
 
-
-![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409131740745.png)
-
-如上图，如果不需要修改
