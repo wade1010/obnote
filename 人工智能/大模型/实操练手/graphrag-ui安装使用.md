@@ -1,21 +1,50 @@
 
 # pip 安装使用
 
-需要有python环境，这个
+## 1. 安装ollama（可选）:
+
+    访问 [Ollama官网](https://ollama.com/) 来安装。如果是 Linux ，可以直接运行下面命令
+
+   ```bash
+   curl -fsSL https://ollama.com/install.sh | sh
+   ```
+
+## 2. pip 安装本软件：
+
+   ```bash
+   pip install graphrag-ui
+   或者
+   pip install graphrag-ui -i https://pypi.org/simple
+   ```
+
+3. 启动 API Server
+
+    ```bash
+    graphrag-ui-server
+   ```
+
+4. 启动 UI
+
+    启动综合版 UI
+
+    ```bash
+    graphrag-ui
+   ```
+
+    或启动纯净版 UI
+
+    ```bash
+    graphrag-ui-pure
+   ```
 
 
 如果ollama和该软件安装不在同一台机器上，需要修改下设置。
 
-
+执行下面两个命令
 ```
 graphrag-ui-server
-```
-
-
-```
 graphrag-ui
 ```
-
 
 启动后，浏览器打开 http://yourip:7862/
 
