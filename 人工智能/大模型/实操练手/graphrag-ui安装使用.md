@@ -1,5 +1,9 @@
 
-# pip 安装使用
+# 介绍
+项目地址： https://github.com/wade1010/graphrag-ui
+GraphRAG-UI 是 [GraphRAG](https://github.com/microsoft/graphrag) 的用户友好界面,GraphRAG 是一个强大的工具,可使用检索增强生成(RAG)方法对大量文本数据进行索引和查询。本项目支持最新版graphrag-0.3.3，旨在为 GraphRAG 提供方便的管理和交互方式,支持配置 ollama 等本地大模型服务,使其更容易为广大用户所使用。
+
+# pip 安装
 
 ## 1. 安装ollama（可选）:
 
