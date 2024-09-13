@@ -3,7 +3,7 @@
 [global]
 index-url=https://pypi.tuna.tsinghua.edu.cn/simple/
 extra-index-url=
-        http://mirrors.aliyun.com/pypi/simple/
+        https://mirrors.aliyun.com/pypi/simple/
         http://pypi.douban.com/simple
         http://pypi.mirrors.ustc.edu.cn/simple/
 
@@ -37,10 +37,16 @@ extra-index-url=
 
 [install]
 trusted-host=
-        pypi.tuna.tsinghua.edu.cn
-        mirrors.aliyun.com
         pypi.douban.com
         pypi.mirrors.ustc.edu.cn
+```
 
-ssl_verify: false
+
+上面有时候会出现warning
+
+最简单配置
+
+```shell
+[global]
+index-url=https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
