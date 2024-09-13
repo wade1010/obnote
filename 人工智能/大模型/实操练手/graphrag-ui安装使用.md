@@ -101,5 +101,3 @@ GraphRAG 需要使用txt文件进行解析。自己找一些，然后通过下�
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409131758894.png)
 
 这一步骤根据文件大小来决定时间，建议初期测试可以用个小文件。
-
-注意上图里面有个参数 Resume Timestamp (optional)  这个参数在测试阶段很有用，
