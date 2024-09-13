@@ -67,3 +67,22 @@ Embeddings API Base URL同理。
 
 # 使用
 
+默认 ollama和本软件是需要安装在同一服务器的，如果不是就按上面章节的方法修改下。
+
+## 下载模型
+
+默认模型分别是 qwen2:latest 和 nomic-embed-text:latest ，跑起来占5G多显存。
+
+
+```
+ollama pull qwen2:latest
+```
+
+
+```
+ollama pull nomic-embed-text:latest
+```
+
+
+## 模型修改
+如果不想使用默认模型，可以先试用ollama下载想要的模型，然后根据下面方法修改配置。
