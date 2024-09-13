@@ -17,26 +17,28 @@
    pip install graphrag-ui -i https://pypi.org/simple
    ```
 
-3. 启动 API Server
+## 3. 启动 API Server
 
-    ```bash
+```bash
     graphrag-ui-server
    ```
-
-4. 启动 UI
+   
+## 4. 启动 UI
 
     启动综合版 UI
 
-    ```bash
-    graphrag-ui
-   ```
+```bash
+graphrag-ui
+```
 
     或启动纯净版 UI
 
-    ```bash
-    graphrag-ui-pure
+```bash
+graphrag-ui-pure
    ```
 
+
+# ollama和本软件非同一机器启动的情况
 
 如果ollama和该软件安装不在同一台机器上，需要修改下设置。
 
@@ -54,4 +56,6 @@ Embeddings API Base URL同理。
 
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409131605016.png)
 
-￣□￣｜｜，测试发现目前有点bug，这个更新后，然后刷新，但是页面这里还是显示旧值，不影响使用，后期修复下。
+￣□￣｜｜，测试发现目前有点bug，这个更新后，加入手动刷新页面，页面这里还是显示旧值，不影响使用，后期修复下。
+
+
