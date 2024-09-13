@@ -13,7 +13,6 @@ trusted-host=
         mirrors.aliyun.com
         pypi.douban.com
         pypi.mirrors.ustc.edu.cn
-        download.openmmlab.com
 
 proxy_servers:
   http: http://xxx.xxx.x.xx:8080
@@ -32,8 +31,8 @@ proxy_servers 添加公司/学校等的代理服务器
 [global]
 index-url=https://pypi.tuna.tsinghua.edu.cn/simple/
 extra-index-url=
-        http://mirrors.aliyun.com/pypi/simple/
-        http://pypi.douban.com/simple
+        https://mirrors.aliyun.com/pypi/simple/
+        http://pypi.douban.com/simple/
         http://pypi.mirrors.ustc.edu.cn/simple/
 
 [install]
@@ -42,7 +41,6 @@ trusted-host=
         mirrors.aliyun.com
         pypi.douban.com
         pypi.mirrors.ustc.edu.cn
-        download.openmmlab.com
 
 ssl_verify: false
 ```
