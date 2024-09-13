@@ -13,6 +13,20 @@ https://cloud.tencent.com/developer/article/1757852
 
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409111759763.png)
 
+
+
+```shell
+pip install twine
+```
+
+
+
+```shell
+twine upload dist/*
+```
+
+
+
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409111801071.png)
 
 
