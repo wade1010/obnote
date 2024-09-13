@@ -86,3 +86,18 @@ ollama pull nomic-embed-text:latest
 
 ## 模型修改
 如果不想使用默认模型，可以先试用ollama下载想要的模型，然后根据下面方法修改配置。
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409131754366.png)
+
+## 上传txt文件
+GraphRAG 需要使用txt文件进行解析。自己找一些，然后通过下面步骤
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409131756832.png)
+
+上传成功后，可以查看自己传的文件，如下图
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409131757118.png)
+
+
+## 构建索引
+步骤如下图
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409131758894.png)
+
+这一步骤根据文件大小来
