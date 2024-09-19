@@ -6,27 +6,36 @@
 
 ```
 Stable repository - Debian / Ubuntu
-Ensure you have the needed support packages already installed:
+Ensure you have the needed support packages already installed:
+
 # apt install apt-transport-https curl
-Retrieve the OpenVPN Inc package signing key:
+Retrieve the OpenVPN Inc package signing key:
+
 # mkdir -p /etc/apt/keyrings    ### This might not exist in all distributions
 # curl -sSfL https://packages.openvpn.net/packages-repo.gpg >/etc/apt/keyrings/openvpn.asc
-Replace the DISTRIBUTION part in the command below using the release name from the table above to set up the apt source listing:
+Replace the DISTRIBUTION part in the command below using the release name from the table above to set up the apt source listing:
+
 # echo "deb [signed-by=/etc/apt/keyrings/openvpn.asc] https://packages.openvpn.net/openvpn3/debian DISTRIBUTION main" >>/etc/apt/sources.list.d/openvpn3.list
-Example for Debian 12:
+Example for Debian 12:
+
 # echo "deb [signed-by=/etc/apt/keyrings/openvpn.asc] https://packages.openvpn.net/openvpn3/debian bookworm main" >>/etc/apt/sources.list.d/openvpn3.list
-To install OpenVPN 3 Linux, run these commands:
+To install OpenVPN 3 Linux, run these commands:
+
 # apt update
 # apt install openvpn
 
    
 Stable repository - Red Hat Enterprise Linux
-Red Hat Enterprise Linux 8 and 9 need to install this package:
+Red Hat Enterprise Linux 8 and 9 need to install this package:
+
 # yum install https://packages.openvpn.net/openvpn-openvpn3-epel-repo-1-1.noarch.rpm
-Red Hat Enterprise Linux 7 and CentOS 7 must install this package instead:
+Red Hat Enterprise Linux 7 and CentOS 7 must install this package instead:
+
 # yum install https://packages.openvpn.net/openvpn-openvpn3-rhel7-repo-1-1.noarch.rpm
-In addition, the ​Fedora EPEL package and the corresponding Code Ready Builder (or PowerTools? on CentOS) must be installed.
-To install OpenVPN 3 Linux, run this command:
+In addition, the ​Fedora EPEL package and the corresponding Code Ready Builder (or PowerTools? on CentOS) must be installed.
+
+To install OpenVPN 3 Linux, run this command:
+
 # yum install openvpn3-client
 ```
 
