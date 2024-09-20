@@ -207,3 +207,6 @@ KeyError: 'community'
 页面提问，页面报错，但是后台可以显示结果了。后续再折腾2024-9-8 18:41:13
 
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409081840650.png)
+
+
+后续在 《graphrag-ui安装使用》里面折腾好了
