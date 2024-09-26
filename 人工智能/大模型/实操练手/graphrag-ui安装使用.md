@@ -62,7 +62,7 @@ Embeddings API Base URL同理。
 
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202409131605016.png)
 
-￣□￣｜｜，测试发现目前有点bug，这个更新后，加入手动刷新页面，页面这里还是显示旧值，不影响使用，后期修复下。
+￣□￣｜｜，测试发现目前有点bug，这个更新后，假如手动刷新页面，页面这里还是显示旧值，不影响使用，后期修复下。
 
 
 # 使用
