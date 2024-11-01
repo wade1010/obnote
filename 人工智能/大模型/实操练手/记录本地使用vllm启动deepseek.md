@@ -7,3 +7,15 @@ CUDA_VISIBLE_DEVICES=5,6,7,8 python -m vllm.entrypoints.openai.api_server --port
 
 
 
+
+```
+curl http://localhost:11111/v1/chat/completions \
+    -H "Content-Type: application/json" \
+    -d '{
+    "model": "DeepSeek-V2-Lite-Chat",
+    "messages": [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "Tell me something about large language models."}
+    ]
+    }'
+```
