@@ -1,4 +1,4 @@
-本地找到了一个已经安装vllm的python环境
+本地找到了一个已经安装vllm的python环境  ，如果没有可以参考 https://53ai.com/news/finetuning/2024090663471.html
 
 conda  activate xxxx
 
