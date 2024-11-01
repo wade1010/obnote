@@ -4,3 +4,6 @@ conda  activate xxxx
 
 
 CUDA_VISIBLE_DEVICES=5,6,7,8 python -m vllm.entrypoints.openai.api_server --port 11111 --served-model-name DeepSeek-V2-Lite-Chat --model /llm/xhcheng/text-generation-webui/models/DeepSeek-V2-Lite-Chat --tensor-parallel-size 4 --trust-remote-code --gpu-memory-utilization 0.95 --max-model-len 14000
+
+
+
