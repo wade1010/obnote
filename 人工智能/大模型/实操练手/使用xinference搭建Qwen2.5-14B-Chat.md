@@ -28,3 +28,16 @@ xinference:
 
 http://192.168.100.13:9997
 
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202411191136306.png)
+
+启动自定义模型
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202411191137992.png)
+
+
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202411191137124.png)
+
+
+
+在oneapi中使用改模型
+
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202411191139411.png)
