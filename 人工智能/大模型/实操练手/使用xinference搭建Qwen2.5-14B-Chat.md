@@ -20,5 +20,11 @@ xinference:
       - ~/xinference:/root/.xinference
       # - ~/xinference/cache/huggingface:/root/.cache/huggingface
       # - ~/xinference/cache/modelscope:/root/.cache/modelscope
-      - /你的模型目录:
+      - /你的模型目录:/容器内目录  示例如下
+      - /yourllmdir/Qwen2.5-14B-Instruct:/dockerllmdir/Qwen2.5-14B-Instruct
 ```
+
+启动容器后，打开xinference
+
+http://192.168.100.13:9997
+
