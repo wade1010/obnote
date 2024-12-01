@@ -46,3 +46,13 @@ pip install hikyuu
 cd star_hub
 
 创建部件：python setup.py create -t ind -n example -cpp
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202412012052419.png)
+
+
+编译部件：python setup.py build -t ind -n example
+
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202412012053421.png)
+
+
+测试部件：python setup.py test -t ind -n example
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202412012054301.png)
