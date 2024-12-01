@@ -1,3 +1,5 @@
+## 安装正确的vs
+
 vs版本说要求是2022 17.9及以下
 
 版本下载链接：
@@ -30,3 +32,5 @@ winget install -v 17.9.1 "Microsoft.VisualStudio.2022.Community"
 （安装过程中，可能会弹出提示 Do you agree to all the source agreement terms? [Y] Yes [N] No:
 
 如果弹出了以上提示，输入 **y**，按下回车运行。）
+
+## 下载hikyuu_star代码
