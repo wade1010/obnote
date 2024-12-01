@@ -34,3 +34,13 @@ winget install -v 17.9.1 "Microsoft.VisualStudio.2022.Community"
 如果弹出了以上提示，输入 **y**，按下回车运行。）
 
 ## 下载hikyuu_star代码
+这个需要群主给权限下载，代码在gitecode上面
+
+## python环境
+conda create -n hikyuu_start python=3.12
+pip install hikyuu
+
+## 编译测试
+进入项目根目录
+
+cd star_hub
