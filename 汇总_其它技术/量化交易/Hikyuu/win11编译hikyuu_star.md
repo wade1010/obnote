@@ -44,3 +44,5 @@ pip install hikyuu
 进入项目根目录
 
 cd star_hub
+
+创建部件：python setup.py create -t ind -n example -cpp
