@@ -37,7 +37,7 @@ winget install -v 17.9.1 "Microsoft.VisualStudio.2022.Community"
 这个需要群主给权限下载，代码在gitecode上面
 
 ## python环境
-conda create -n hikyuu_start python=3.12
+conda create -n hikyuu_start python=3.12  （我主要用qmt，发现3.12不兼容xtquant，后来改为3.10）
 pip install hikyuu
 
 ## 编译测试
