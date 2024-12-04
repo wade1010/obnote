@@ -32,3 +32,20 @@ else:
   回测框架会隐式的订阅一个1分钟K线, 确保quote的更新周期不会超过1分钟
 ```
 规则4: 策略程序中的多个序列的更新, 按时间顺序合并推进. 每次 wait_update 时, 优先处理用户事件, 当没有用户事件时, 从各序列中选择下一次更新时间最近的, 更新到这个时间:
+
+```
+ka = api.get_kline_serial("SHFE.cu1901", 10)              # 请求一个10秒线
+kb = api.get_kline_serial("SHFE.cu1902", 15)              # 请求一个15秒线
+print(ka.iloc[-1].datetime, kb.iloc[-1].datetime)   # 2018/01/01 09:00:00, 2018/01/01 09:00:00
+api.wait_update()                                         # 推进一步, ka先更新了, 时间推到 09:00:10
+print(ka.iloc[-1].datetime, kb.iloc[-1].datetime)   # 2018/01/01 09:00:10, 2018/01/01 09:00:00
+api.wait_update()                                         # 再推一步, 这次时间推到 09:00:15, kb更新了
+print(ka.iloc[-1].datetime, kb.iloc[-1].datetime)   # 2018/01/01 09:00:10, 2018/01/01 09:00:15
+api.wait_update()                                         # 再推一步, 这次时间推到 09:00:20, ka更新了
+print(ka.iloc[-1].datetime, kb.iloc[-1].datetime)   # 2018/01/01 09:00:20, 2018/01/01 09:00:15
+api.wait_update()                                         # 再推一步, 时间推到 09:00:30, ka, kb都更新了
+print(ka.iloc[-1].datetime, kb.iloc[-1].datetime)   # 2018/01/01 09:00:30, 2018/01/01 09:00:30
+```
+**注意** ：如果未订阅 quote，模拟交易在下单时会自动为此合约订阅 quote ，根据回测时 quote 的更新规则，如果此合约没有订阅K线或K线周期大于分钟线 **则会自动订阅一个分钟线** 。
+
+另外，对 **组合合约** 进行回测时需注意：只能通过订阅 tick 数据来回测，不能订阅K线，因为K线是由最新价合成的，而交易所发回的组合合约数据中无最新价。
