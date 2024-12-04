@@ -25,11 +25,11 @@ while True:
 
 **以当前持仓为 多头方向 且目标净持仓为0 为例, 对净持仓的调整逻辑为:**
 
-- 如果 offset_priority 为默认值"今昨,开", 则: 先平多头今仓, (若平完今仓后未达到目标手数)再平多头昨仓, (若平完昨仓后未达到目标手数)再在空头方向开仓.
-    
-- 如果 offset_priority 为"今开"(即禁止平昨仓), 则: 先平多头今仓, (若平完今仓后未达到目标手数)再在空头方向开仓. (禁止平今仓的"昨开"与此类似)
-    
-- 如果 offset_priority 为"开"(即禁止平仓), 则: 直接在空头方向开仓以达到目标净持仓.
+<font color="#ff0000">- 如果 offset_priority 为默认值"今昨,开", 则: 先平多头今仓, (若平完今仓后未达到目标手数)再平多头昨仓, (若平完昨仓后未达到目标手数)再在空头方向开仓.</font>
+<font color="#ff0000">    </font>
+<font color="#ff0000">- 如果 offset_priority 为"今开"(即禁止平昨仓), 则: 先平多头今仓, (若平完今仓后未达到目标手数)再在空头方向开仓. (禁止平今仓的"昨开"与此类似)</font>
+<font color="#ff0000">    </font>
+<font color="#ff0000">- 如果 offset_priority 为"开"(即禁止平仓), 则: 直接在空头方向开仓以达到目标净持仓.</font>
     
 
 **注意:**
@@ -41,3 +41,4 @@ while True:
 - 5. 如需要取消当前 TargetPosTask 任务，请参考 [TargetPosTask 高级功能](https://doc.shinnytech.com/tqsdk/latest/advanced/targetpostask2.html#targetpostask2) 。
         
 - 6. 请勿在使用 TargetPosTask 的同时使用 insert_order() 函数, 否则将导致 TargetPosTask 报错或错误下单。
+
