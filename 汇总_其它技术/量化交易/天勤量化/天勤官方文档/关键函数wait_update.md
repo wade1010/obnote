@@ -33,3 +33,21 @@ while True:             #一个循环
 - 让正在运行中的后台任务获得动作机会(如策略程序创建的后台调仓任务只会在wait_update()时发出交易指令).
     
 - 如果没有收到数据包，则挂起等待.
+
+
+注意:
+
+- 由于存在网络延迟, 因此有数据更新不代表之前发出的所有请求都被处理了, 例如:
+ 
+```
+   from tqsdk import TqApi, TqAuth
+    
+    api = TqApi(auth=TqAuth("快期账户", "账户密码"))
+    quote = api.get_quote("SHFE.cu1812")
+    api.wait_update()
+    print(quote.datetime)
+```
+
+可能输出 ""(空字符串), 表示还没有收到该合约的行情
+
+
