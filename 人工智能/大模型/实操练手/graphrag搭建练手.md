@@ -27,7 +27,7 @@ vim ragtest/.env
 ```
 GRAPHRAG_API_KEY=sk-1UIybqycAYSTCUBf42C5757cBf94492a9c2534A8xxxxxxx
 ```
-vim ragetest/settings.yaml
+vim ragtest/settings.yaml
 修改为下图
 ![image.png](https://gitee.com/hxc8/images9/raw/master/img/202409071846323.png)
 
