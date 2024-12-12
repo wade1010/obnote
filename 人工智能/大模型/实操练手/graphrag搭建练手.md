@@ -12,6 +12,11 @@ mkdir -p ./ragtest/input
 ```sh
 curl https://www.gutenberg.org/cache/epub/24022/pg24022.txt > ./ragtest/input/book.txt
 ```
+初始化工作区
+
+```
+graphrag init --root ./ragtest
+```
 
 ```sh
 python -m graphrag.index --init --root ./ragtest
