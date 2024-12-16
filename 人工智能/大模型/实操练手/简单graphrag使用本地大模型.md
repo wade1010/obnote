@@ -7,25 +7,24 @@ cat indexing/.env
 
 
 创建索引
-./graphragpyenv/bin/python -m graphrag.index --root ./indexing/
+sh start_indexing.sh
 
 
 使用
 
+-global模式：
 Here is an example using Global search to ask a high-level question:
 
-```sh
-./graphragpyenv/bin/python -m graphrag.query \
---root ./indexing \
---method global \
-"讲了什么故事?"
+```
+sh query_global.sh 讲了什么故事?
 ```
 
+
+
+-local模式：
 Here is an example using Local search to ask a more specific question about a particular character:
 
-```sh
-./graphragpyenv/bin/python -m graphrag.query \
---root ./indexing \
---method local \
-"讲讲美猴王?"
+
+```
+sh query_local.sh 讲讲美猴王?
 ```
