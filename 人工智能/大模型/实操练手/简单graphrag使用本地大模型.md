@@ -28,3 +28,4 @@ Here is an example using Local search to ask a more specific question about a pa
 ```
 sh query_local.sh 讲讲美猴王?
 ```
+
