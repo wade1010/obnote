@@ -27,5 +27,5 @@ Here is an example using Local search to ask a more specific question about a pa
 ./graphragpyenv/bin/python -m graphrag.query \
 --root ./indexing \
 --method local \
-"谁是美猴王?"
+"讲讲美猴王?"
 ```
