@@ -15,7 +15,7 @@ cat indexing/.env
 Here is an example using Global search to ask a high-level question:
 
 ```sh
-python -m graphrag.query \
+./graphragpyenv/bin/python -m graphrag.query \
 --root ./indexing \
 --method global \
 "讲了什么故事?"
@@ -24,7 +24,7 @@ python -m graphrag.query \
 Here is an example using Local search to ask a more specific question about a particular character:
 
 ```sh
-python -m graphrag.query \
+./graphragpyenv/bin/python -m graphrag.query \
 --root ./indexing \
 --method local \
 "谁是美猴王?"
