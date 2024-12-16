@@ -12,3 +12,9 @@ bug
     INFO - 模拟交易委托单 TQSIM, PYSDK_target_1f5a420c506bae193e4fa71e6dd1839c: 全部成交
 
 移仓换月，记录之前持仓，方便后续计算盈利亏损来做操作，要不然用移仓的点位去计算，会有影响
+
+
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202412161251930.png)
+
+
+![image.png](https://gitee.com/hxc8/images10/raw/master/img/202412161252176.png)
