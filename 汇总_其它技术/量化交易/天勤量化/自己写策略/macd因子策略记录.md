@@ -19,3 +19,6 @@ bug
 
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202412161252176.png)
 ![image.png](https://gitee.com/hxc8/images10/raw/master/img/202412161755872.png)
+
+
+![image.png](https://gitee.com/hxc8/images9/raw/master/img/202412192344920.png)
